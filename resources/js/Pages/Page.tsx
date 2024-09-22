@@ -93,16 +93,33 @@ export default function Page() {
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-8">Skills</h2>
               <div className="grid grid-cols-1 justify-items-center md:grid-cols-3 gap-8 text-center">
-                {skills.map((skill: Skill) => (
-                    <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-4">{skill.name}</h3>
-                    <div className='flex flex-wrap justify-center'>
-                        {skill.skills.map((value: string) => (
-                            <div className={`bg-${skill.color}-500 text-white rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
-                        ))}
-                    </div>
-                    </div>
-                ))}
+                <div className="p-4">
+                {/* Skill one */}
+                <h3 className="text-xl font-semibold mb-4">{skills[0].name}</h3>
+                <div className='flex flex-wrap justify-center'>
+                    {skills[0].skills.map((value: string) => (
+                        <div className={`text-white bg-red-600 rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
+                    ))}
+                </div>
+                </div>
+                <div className="p-4">
+                {/* Skill two */}
+                <h3 className="text-xl font-semibold mb-4">{skills[1].name}</h3>
+                <div className='flex flex-wrap justify-center'>
+                    {skills[0].skills.map((value: string) => (
+                        <div className={`text-white bg-blue-600 rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
+                    ))}
+                </div>
+                </div>
+                <div className="p-4">
+                {/* Skill three */}
+                <h3 className="text-xl font-semibold mb-4">{skills[2].name}</h3>
+                <div className='flex flex-wrap justify-center'>
+                    {skills[0].skills.map((value: string) => (
+                        <div className={`text-white bg-yellow-600 rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
+                    ))}
+                </div>
+                </div>
               </div>
             </div>
           </section>
