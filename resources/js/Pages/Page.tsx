@@ -49,6 +49,8 @@ export default function Page() {
     ]
 
     return (
+        <>
+        <Head title='Portfolio' />
         <div className="min-h-screen bg-white text-gray-900">
           {/* Hero Section */}
           <header className="flex flex-col items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: `url('/path-to-your-background-image.jpg')` }}>
@@ -106,7 +108,7 @@ export default function Page() {
                 {/* Skill two */}
                 <h3 className="text-xl font-semibold mb-4">{skills[1].name}</h3>
                 <div className='flex flex-wrap justify-center'>
-                    {skills[0].skills.map((value: string) => (
+                    {skills[1].skills.map((value: string) => (
                         <div className={`text-white bg-blue-600 rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
                     ))}
                 </div>
@@ -115,7 +117,7 @@ export default function Page() {
                 {/* Skill three */}
                 <h3 className="text-xl font-semibold mb-4">{skills[2].name}</h3>
                 <div className='flex flex-wrap justify-center'>
-                    {skills[0].skills.map((value: string) => (
+                    {skills[2].skills.map((value: string) => (
                         <div className={`text-white bg-yellow-600 rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
                     ))}
                 </div>
@@ -159,5 +161,6 @@ export default function Page() {
             <p>&copy; 2024 Shawn Weigand. All rights reserved.</p>
           </footer>
         </div>
+        </>
     );
 }
