@@ -36,7 +36,7 @@ export default function Page() {
                     ],
         },
         {
-            name: "Cloud/DevSecOps",
+            name: "Cloud/DevOps",
             color: "yellow",
             skills: [
                         "Azure",
@@ -84,8 +84,9 @@ export default function Page() {
             <div className="max-w-7xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
               <p className="text-lg leading-relaxed text-center">
-                I'm a web developer specializing in building (and occasionally designing) exceptional digital experiences.
-                Currently, I'm focused on developing responsive web applications using modern JavaScript frameworks like React and Next.js.
+              I'm a Full Stack Engineer working in the Cloud and DevOps spaces with experience in building scalable, secure applications and automating infrastructure.
+              I specialize in developing cloud-native solutions using React, PHP, Terraform, Kubernetes, and Azure DevOps.
+              Passionate about optimizing systems and integrating DevSecOps practices, I thrive at the intersection of development and operations to deliver reliable, high-performing software.
               </p>
             </div>
           </section>
