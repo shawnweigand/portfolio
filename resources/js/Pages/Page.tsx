@@ -93,8 +93,9 @@ export default function Page() {
                         </svg>
                     </a>
                     <a href="https://x.com/theshawnshop" target="_blank" className="block col-span-1 mt-1">
-                        <svg width="40" height="40" viewBox="0 0 357 322" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-blue-500 hover:opacity-75 transition-opacity duration-200">
-                            <path d="M281.026 0.125H335.608L216.362 136.415L356.645 321.875H246.805L160.774 209.394L62.335 321.875H7.71996L135.265 176.097L0.690964 0.125H113.32L191.084 102.936L281.026 0.125ZM261.869 289.205H292.114L96.886 31.079H64.4305L261.869 289.205Z" fill="#3B82F6"/>
+                        <svg width="43" height="43" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='hover:opacity-75 transition-opacity duration-200'>
+                            <path d="M11.154 9.72955L7.08868 4.0412H4.92041L9.9563 11.0871L10.5902 11.9734L14.9006 18.0096H17.0689L11.7852 10.6159L11.154 9.72955Z" fill="#3B82F6"/>
+                            <path d="M20.1598 0H1.84021C0.823853 0 0 0.823853 0 1.84021V20.1598C0 21.1761 0.823853 22 1.84021 22H20.1598C21.1761 22 22 21.1761 22 20.1598V1.84021C22 0.823853 21.1761 0 20.1598 0ZM14.2354 19L9.8728 12.787L4.41144 19H3L9.24689 11.8953L3 3H7.76465L11.8948 8.88196L17.0696 3H18.481L12.524 9.77563L19 19H14.2354Z" fill="#3B82F6"/>
                         </svg>
                     </a>
                     </div>
