@@ -19,10 +19,9 @@ export default function Page() {
             skills: [
                         "React",
                         "Next.js",
-                        "HTML",
-                        "CSS",
-                        "Tailwind",
-                        "JavaScript"
+                        "Typescript",
+                        "JavaScript",
+                        "Tailwind"
                     ],
         },
         {
@@ -43,6 +42,7 @@ export default function Page() {
                         "Docker",
                         "Kubernetes",
                         "Terraform",
+                        "Helm"
                     ],
         }
 
