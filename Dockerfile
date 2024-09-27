@@ -1,5 +1,5 @@
 # Development Stage (includes Node.js and npm)
-FROM serversideup/php:8.3-fpm-nginx as dev
+FROM serversideup/php:8.3-fpm-nginx AS dev
 
 USER root
 
@@ -25,7 +25,7 @@ RUN npm install --legacy-peer-deps
 USER www-data
 
 # Final Stage for Production (no Node.js)
-FROM serversideup/php:8.3-fpm-nginx as prod
+FROM serversideup/php:8.3-fpm-nginx AS prod
 
 # Set work directory
 WORKDIR /var/www/html
