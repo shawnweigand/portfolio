@@ -1,37 +1,26 @@
-# Development Stage (includes Node.js and npm)
-FROM serversideup/php:8.3-fpm-nginx AS dev
+FROM serversideup/php:8.3-fpm-nginx
 
 USER root
 
-# Install Node.js and npm for development
-RUN apt-get update && apt-get install -y curl git unzip && \
+## Install Node
+RUN apt-get update && \
+    apt-get install -y curl && \
     curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-    apt-get install -y nodejs && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y nodejs
 
-# Set work directory
-WORKDIR /var/www/html
+COPY --chown=www-data:www-data . /var/www/html
 
-# Copy application files
-COPY --chown=www-data:www-data . .
-
-# Install PHP dependencies (Composer)
-RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist
-
-# Install Node.js dependencies and run Vite for development
-RUN npm install --legacy-peer-deps
-
-# Drop to unprivileged user
+# Drop back to our unprivileged user
 USER www-data
 
-# Final Stage for Production (no Node.js)
-FROM serversideup/php:8.3-fpm-nginx-alpine AS prod
+## Install packages
+RUN composer install --quiet --no-dev --no-scripts --no-interaction --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
 
-# Set work directory
-WORKDIR /var/www/html
+# Install node dependencies
+RUN npm set progress=false && \
+    npm config set depth 0 && \
+    npm install && \
+    npm run build && \
+    rm -rf node_modules
 
-# Copy the application files from the build stage
-COPY --chown=www-data:www-data --from=dev /var/www/html /var/www/html
-
-# Drop to unprivileged user
-USER www-data
+COPY .env /var/www/html/.env
