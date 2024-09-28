@@ -22,5 +22,3 @@ RUN npm set progress=false && \
     npm install && \
     npm run build && \
     rm -rf node_modules
-
-COPY .env /var/www/html/.env
