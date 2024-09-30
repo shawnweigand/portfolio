@@ -48,6 +48,9 @@ jobs:
       run: doctl kubernetes cluster kubeconfig save k8s-do-prod-nyc1-weigandshawn
     - name: Helm tool installer
       uses: azure/setup-helm@v4.2.0
+    - name: List directory structure
+      run: |
+        ls -R
     - name: Deploy Helm chart to DOKS
       run: |
         helm upgrade --install portfolio ./helm \
