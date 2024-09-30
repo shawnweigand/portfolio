@@ -50,7 +50,7 @@ jobs:
       uses: azure/setup-helm@v4.2.0
     - name: Deploy Helm chart to DOKS
       run: |
-        helm upgrade --install portfolio ../../helm \
+        helm upgrade --install portfolio ./helm \
         --set image.repository="${{ secrets.DOCKER_USERNAME }}/prod" \
         --set image.tag="portfolio" \
         --namespace portfolio
