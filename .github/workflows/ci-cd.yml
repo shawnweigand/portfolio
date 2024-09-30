@@ -51,3 +51,4 @@ jobs:
         helm upgrade --install portfolio ../helm \
         --set image.repository="${{ secrets.DOCKER_USERNAME }}/prod" \
         --set image.tag="portfolio" \
+        --namespace portfolio
