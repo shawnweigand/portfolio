@@ -3,3 +3,10 @@ deployment:
   image:
     repository: "shawnweigand/prod"
     tag: "portfolio"
+  registry:
+    imagePullSecret: "docker-registry-secret"
+
+serviceAccount:
+  name: "docker-registry-serviceaccount"
+  imagePullSecret: "docker-registry-secret"
+
