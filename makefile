@@ -16,5 +16,6 @@ exec:
 # Combined target to run both up and exec
 run: up exec
 
+# Sync HashiCorp Vault secrets with cluster
 secrets:
 	pwsh secrets-sync.ps1
