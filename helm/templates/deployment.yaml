@@ -13,10 +13,13 @@ spec:
         app: {{ .Release.Name }}
     spec:
       serviceAccountName: {{ .Values.serviceAccount.name }}
+      imagePullSecrets:
+        - name: {{ .Values.serviceAccount.imagePullSecret }}
       containers:
         - name: {{ .Release.Name }}
           image: "{{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}"
           ports:
             - containerPort: 8080
-      imagePullSecrets:
-        - name: {{ .Values.serviceAccount.imagePullSecret }}
+          envFrom:
+          - secretRef:
+              name: "{{ .Release.Name }}-secret"
