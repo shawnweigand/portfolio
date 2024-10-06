@@ -3,7 +3,7 @@ DOCKER_COMPOSE = docker-compose
 APP_CONTAINER = app  # Change this to the name of your app container
 SHELL_COMMAND = /bin/bash  # Or /bin/sh, depending on your container
 
-.PHONY: up exec run secrets
+.PHONY: up exec run install secrets
 
 # Bring up the Docker Compose services
 up:
@@ -15,6 +15,10 @@ exec:
 
 # Combined target to run both up and exec
 run: up exec
+
+install:
+	composer install
+    npm install
 
 # Sync HashiCorp Vault secrets with cluster
 secrets:
