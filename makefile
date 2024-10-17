@@ -20,6 +20,10 @@ install:
 	composer install
 	npm install
 
+migrate:
+	touch ./database/database.sqlite
+	php artisan migrate --seed
+
 # Sync HashiCorp Vault secrets with cluster
 secrets:
 	pwsh secrets-sync.ps1
