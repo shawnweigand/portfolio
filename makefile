@@ -18,7 +18,7 @@ run: up exec
 
 install:
 	composer install
-    npm install
+	npm install
 
 # Sync HashiCorp Vault secrets with cluster
 secrets:

@@ -13,3 +13,5 @@ ingress:
   host: shawnweigand.com
   tls: false
   tlsSecretName: my-tls-secret # TLS secret name if you're using HTTPS
+
+config:
