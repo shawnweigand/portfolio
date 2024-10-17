@@ -3,3 +3,15 @@ deployment:
   image:
     repository: "shawnweigand/prod"
     tag: "portfolio"
+  registry:
+    imagePullSecret: "docker-registry-secret"
+serviceAccount:
+  name: "docker-registry-serviceaccount"
+  imagePullSecret: "docker-registry-secret"
+
+ingress:
+  host: shawnweigand.com
+  tls: false
+  tlsSecretName: my-tls-secret # TLS secret name if you're using HTTPS
+
+config:

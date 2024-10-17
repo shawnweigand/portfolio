@@ -12,8 +12,14 @@ spec:
       labels:
         app: {{ .Release.Name }}
     spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      imagePullSecrets:
+        - name: {{ .Values.serviceAccount.imagePullSecret }}
       containers:
         - name: {{ .Release.Name }}
           image: "{{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}"
           ports:
-            - containerPort: 80
+            - containerPort: 8080
+          envFrom:
+          - secretRef:
+              name: "{{ .Release.Name }}-secret"
