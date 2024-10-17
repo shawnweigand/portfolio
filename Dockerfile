@@ -10,6 +10,10 @@ RUN apt-get update && \
 
 COPY --chown=www-data:www-data . /var/www/html
 
+# Always create the SQLite database file
+RUN touch /var/www/html/database/database.sqlite && \
+    chown www-data:www-data /var/www/html/database/database.sqlite
+
 # Drop back to our unprivileged user
 USER www-data
 
