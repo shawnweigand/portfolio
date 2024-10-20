@@ -1,11 +1,11 @@
 
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
-import Header from '@/Partials/Header';
-import About from '@/Partials/About';
-import Skills from '@/Partials/Skills';
-import Projects from '@/Partials/Projects';
-import Contact from '@/Partials/Contact';
+import Header from '@/Pages/Partials/Header';
+import About from '@/Pages/Partials/About';
+import Skills from '@/Pages/Partials/Skills';
+import Projects from '@/Pages/Partials/Projects';
+import Contact from '@/Pages/Partials/Contact';
 
 export default function Page() {
 
