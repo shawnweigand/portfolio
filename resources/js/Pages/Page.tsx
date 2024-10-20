@@ -7,12 +7,6 @@ import Skills from '@/Partials/Skills';
 import Projects from '@/Partials/Projects';
 import Contact from '@/Partials/Contact';
 
-interface Skill {
-    name: string
-    color: string
-    skills: string[]
-}
-
 export default function Page() {
 
     return (
