@@ -1,17 +1,20 @@
 deployment:
   replicas: 1
   image:
-    repository: "shawnweigand/prod"
-    tag: "portfolio"
+    repository: shawnweigand/prod
+    tag: portfolio
   registry:
-    imagePullSecret: "docker-registry-secret"
+    imagePullSecret: docker-registry-secret
 serviceAccount:
-  name: "docker-registry-serviceaccount"
-  imagePullSecret: "docker-registry-secret"
+  name: docker-registry-serviceaccount
+  imagePullSecret: docker-registry-secret
 
 ingress:
   host: shawnweigand.com
-  tls: false
-  tlsSecretName: my-tls-secret # TLS secret name if you're using HTTPS
+  tls: true
+
+issuer:
+  email: weigandshawn@gmail.com
+  server: https://acme-v02.api.letsencrypt.org/directory
 
 config:
