@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: "{{ .Release.Name }}-ingress"
   annotations:
+    cert-manager.io/issuer: "{{ .Release.Name }}-issuer"
     nginx.ingress.kubernetes.io/rewrite-target: /
     # Optional: Other NGINX-specific annotations
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
@@ -23,5 +24,5 @@ spec:
   tls:
   - hosts:
     - {{ .Values.ingress.host }}
-    secretName: {{ .Values.ingress.tlsSecretName }}
+    secretName: "{{ .Release.Name }}-private-key-secret"
   {{- end }}
