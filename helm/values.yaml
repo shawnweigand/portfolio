@@ -18,4 +18,5 @@ issuer:
   server: https://acme-v02.api.letsencrypt.org/directory
 
 config:
-  # APP_NAME: "Shawn Weigand"
+  APP_URL: https://shawnweigand.com
+
