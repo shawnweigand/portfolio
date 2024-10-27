@@ -6,8 +6,13 @@ import About from '@/Pages/Partials/About';
 import Skills from '@/Pages/Partials/Skills';
 import Projects from '@/Pages/Partials/Projects';
 import Contact from '@/Pages/Partials/Contact';
+import Articles from './Partials/Articles';
 
-export default function Page() {
+interface Props {
+    articles: []
+}
+
+export default function Page({ articles }: Props) {
 
     return (
         <>
@@ -22,8 +27,11 @@ export default function Page() {
             {/* Skills Section */}
             <Skills />
 
+            {/* Articles Section */}
+            <Articles articles={articles}/>
+
             {/* Projects Section */}
-            <Projects />
+            {/* <Projects /> */}
 
             {/* Contact Section */}
             <Contact />
