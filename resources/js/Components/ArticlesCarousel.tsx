@@ -32,7 +32,7 @@ export default function ArticlesCarousel({ articles }: Props) {
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-xl font-bold mb-2">{article.title}</h2>
                 <p className="text-gray-700">{article.pubDate}</p>
-                <a href={article.link} className="text-blue-500 hover:underline mt-4 block">Read more</a>
+                <a target="_blank" href={article.link} className="text-blue-500 hover:underline mt-4 block">Read more</a>
               </div>
             </div>
           ))}
