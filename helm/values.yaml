@@ -19,4 +19,5 @@ issuer:
 
 config:
   APP_URL: https://shawnweigand.com
+  APP_ENV: production
 
