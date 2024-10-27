@@ -2,6 +2,7 @@
 
 namespace App\Actions\Medium;
 
+use Carbon\Carbon;
 use DOMDocument;
 use DOMXPath;
 use Illuminate\Console\Command;
@@ -35,7 +36,7 @@ class GetArticles
 
             $article->title = (string) $item->title;
             $article->link = (string) $item->link;
-            $article->pubDate = (string) $item->pubDate;
+            $article->pubDate = Carbon::parse((string) $item->pubDate)->format('M d, Y');
 
             array_push($this->articles, $article);
         }
