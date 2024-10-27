@@ -4,6 +4,8 @@ interface Article {
     title: string
     link: string
     pubDate: string
+    image: string
+    description: string
 }
 
 interface Props {
@@ -15,13 +17,11 @@ export default function ArticlesCarousel({ articles }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextArticle = () => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % articles.length);
+      setCurrentIndex(currentIndex == articles.length - 1 ? currentIndex : currentIndex + 1);
     };
 
     const prevArticle = () => {
-      setCurrentIndex((prevIndex) =>
-        (prevIndex - 1 + articles.length) % articles.length
-      );
+      setCurrentIndex(currentIndex == 0 ? currentIndex : currentIndex - 1);
     };
 
     return (
@@ -29,12 +29,16 @@ export default function ArticlesCarousel({ articles }: Props) {
         <div className="mx-16 flex transition-transform duration-300 ease-in-out transform" style={{ transform: `translateX(-${currentIndex * (100/3)}%)` }}>
           {articles.map((article, index) => (
             <div key={index} className="w-1/3 flex-shrink-0 p-4">
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h2 className="text-xl font-bold mb-2">{article.title}</h2>
-                <p className="text-gray-700">{article.pubDate}</p>
-                <a target="_blank" href={article.link} className="text-blue-500 hover:underline mt-4 block">Read more</a>
-              </div>
-            </div>
+                <div className="shadow-md h-full flex flex-col rounded-lg">
+                    <img className="w-full h-64 object-cover rounded-t-lg" src={article.image} alt={article.title} />
+                    <div className="bg-white rounded-b-lg p-6 flex-grow flex flex-col justify-between">
+                        <h2 className="text-xl font-bold mb-2">{article.title}</h2>
+                        <p className="text-gray-700">{article.pubDate}</p>
+                        <p className="pt-4">{article.description}</p>
+                        <a target="_blank" href={article.link} className="text-blue-500 hover:underline mt-4 block">Read more</a>
+                    </div>
+                    </div>
+                </div>
           ))}
         </div>
         <button
