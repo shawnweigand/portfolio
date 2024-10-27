@@ -1,4 +1,22 @@
+interface Project {
+    title: string,
+    description: string,
+    github: string,
+    link: string,
+    image: string
+}
+
 export default function Projects() {
+
+    const projects: Project[] = [
+        {
+            title: "Personal Portfolio",
+            description: "test",
+            github: "test",
+            link: "test",
+            image: "test"
+        }
+    ]
 
 
     return (
