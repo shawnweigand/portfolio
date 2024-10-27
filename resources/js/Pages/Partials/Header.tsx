@@ -1,5 +1,5 @@
 import { MapPinIcon } from '@heroicons/react/24/solid'; // or solid for filled icons
-import profile from '/public/images/profile-pic.jpeg'
+import profile from '/public/images/Profile.png'
 
 export default function Header() {
 
@@ -12,7 +12,7 @@ export default function Header() {
                 <img
                 src={profile}
                 alt="Shawn Weigand"
-                className="w-full h-full translate-x-[-15%] translate-y-[-5%] object-top object-cover transform scale-150"
+                className="w-full h-full translate-y-[10%] object-top object-cover transform scale-125"
                 />
             </div>
 

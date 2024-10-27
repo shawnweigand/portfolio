@@ -1,12 +1,18 @@
 <?php
 
+use App\Actions\Medium\GetArticles;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Page');
+
+    $articles = GetArticles::run();
+    return Inertia::render('Page', [
+        'articles' => $articles
+    ]);
+
 })->name('Landing');
 
 // Route::get('/', function () {
