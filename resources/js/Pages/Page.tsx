@@ -31,7 +31,7 @@ export default function Page({ articles }: Props) {
             <Articles articles={articles}/>
 
             {/* Projects Section */}
-            {/* <Projects /> */}
+            <Projects />
 
             {/* Contact Section */}
             <Contact />
