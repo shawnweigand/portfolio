@@ -43,25 +43,12 @@ export default function Projects() {
                     image: Docker
                 },
                 {
-                    name: "K8s",
+                    name: "Kubernetes",
                     image: Kubernetes
                 },
                 {
                     name: "Helm",
                     image: Helm
-                }
-            ]
-        },
-        {
-            title: "test",
-            description: "test",
-            github: "https://github.com/shawnweigand/portfolio",
-            link: "https://google.com",
-            image: shawnweigand,
-            tools: [
-                {
-                    name: "React",
-                    image: "React"
                 }
             ]
         }
@@ -80,9 +67,10 @@ export default function Projects() {
                         <div className="my-4">
                             <h3 className="col-start-1 col-span-1 text-2xl font-bold mb-1">{project.title}</h3>
                             <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
+                            <p className='my-4'>{project.description}</p>
                             <div className="grid grid-cols-4 place-items-center gap-8 my-8">
                                 {project.tools.map((tool, index) => (
-                                    <div>
+                                    <div key={index} className="flex flex-col items-center">
                                         <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
                                         <p className='mt-1 text-center'>{tool.name}</p>
                                     </div>
@@ -96,13 +84,21 @@ export default function Projects() {
                     </>
                     :
                     <>
-                         <div className="my-4 col-start-1 col-span-2 bg-white p-6 rounded-lg shadow-md">
+                        <div className="my-4 col-start-1 col-span-2 bg-white p-6 rounded-lg shadow-md">
                             <a href={project.link} target="_blank"><img src={project.image} alt={project.title} /></a>
                         </div>
                         <div className="my-4">
                             <h3 className="col-start-3 col-span-1 text-2xl font-bold mb-1">{project.title}</h3>
+                            <p className='my-4'>{project.description}</p>
                             <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
-                            <p className="my-4">{project.description}</p>
+                            <div className="grid grid-cols-4 place-items-center gap-8 my-8">
+                                {project.tools.map((tool, index) => (
+                                    <div key={index} className="flex flex-col items-center">
+                                        <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
+                                        <p className='mt-1 text-center'>{tool.name}</p>
+                                    </div>
+                                ))}
+                            </div>
                             <a target="_blank" href={project.github} className="text-blue-500 hover:underline">View on GitHub</a>
                         </div>
                     </>
