@@ -25,7 +25,7 @@ export default function Projects() {
     const projects: Project[] = [
         {
             title: "Personal Portfolio",
-            description: "personal portfolio page",
+            description: "This portfolio site serves as both a showcase of my work and a hands-on project to deepen my skills in full-stack development. It allows me to practice deploying and managing full stack applications with a stateful frontend and API-powered backend on a personal cluster.",
             github: "https://github.com/shawnweigand/portfolio",
             link: "https://shawnweigand.com",
             image: shawnweigand,
@@ -68,7 +68,7 @@ export default function Projects() {
                             <h3 className="col-start-1 col-span-1 text-2xl font-bold mb-1">{project.title}</h3>
                             <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
                             <p className='my-4'>{project.description}</p>
-                            <div className="grid grid-cols-4 place-items-center gap-8 my-8">
+                            <div className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-8 my-8">
                                 {project.tools.map((tool, index) => (
                                     <div key={index} className="flex flex-col items-center">
                                         <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
