@@ -23,7 +23,6 @@ export default function Skills() {
             color: "blue",
             skills: [
                         "Node.js",
-                        "Express",
                         "PHP",
                         "Laravel",
                     ],
