@@ -1,4 +1,11 @@
-import shawnweigand from '/public/images/projects/shawnweigand.png';
+// Projects
+import shawnweigand from '/public/images/projects/shawnweigand.png'
+// Tools
+import React from '/public/images/tools/React.png'
+import Laravel from '/public/images/tools/Laravel.png'
+import Docker from '/public/images/tools/Docker.png'
+import Kubernetes from '/public/images/tools/Kubernetes.png'
+import Helm from '/public/images/tools/Helm.png'
 
 interface Tool {
     name: string
@@ -25,11 +32,23 @@ export default function Projects() {
             tools: [
                 {
                     name: "React",
-                    image: "React"
+                    image: React
                 },
                 {
                     name: "Laravel",
-                    image: "Laravel"
+                    image: Laravel
+                },
+                {
+                    name: "Docker",
+                    image: Docker
+                },
+                {
+                    name: "K8s",
+                    image: Kubernetes
+                },
+                {
+                    name: "Helm",
+                    image: Helm
                 }
             ]
         },
@@ -53,7 +72,7 @@ export default function Projects() {
         <section id="projects" className="py-20 px-4 md:px-16 bg-gray-100">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-3 gap-10 ">
                     {projects.map((project, index) => (
                     <>
                     {index % 2 == 0 ?
@@ -61,9 +80,12 @@ export default function Projects() {
                         <div className="my-4">
                             <h3 className="col-start-1 col-span-1 text-2xl font-bold mb-1">{project.title}</h3>
                             <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
-                            <div className="flex">
+                            <div className="grid grid-cols-4 place-items-center gap-8 my-8">
                                 {project.tools.map((tool, index) => (
-                                    <p className='m-3'>{tool.name}</p>
+                                    <div>
+                                        <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
+                                        <p className='mt-1 text-center'>{tool.name}</p>
+                                    </div>
                                 ))}
                             </div>
                             <a target="_blank" href={project.github} className="text-blue-500 hover:underline">View on GitHub</a>
