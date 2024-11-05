@@ -1,6 +1,7 @@
 <?php
 
 use App\Actions\Medium\GetArticles;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,8 @@ Route::get('/', function () {
     ]);
 
 })->name('Landing');
+
+Route::post('/contact', ContactController::class)->name('Contact');
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [

@@ -11,10 +11,10 @@ export default function Contact() {
     function submit(e: any) {
         e.preventDefault()
         console.log(e);
-        // post('/', {
-        //     preserveScroll: true,
-        //     onSuccess: () => reset(),
-        // })
+        post('/contact', {
+            preserveScroll: true,
+            onSuccess: () => reset(),
+        })
     }
 
     return (
@@ -25,30 +25,25 @@ export default function Contact() {
                     I'm always open to new opportunities and collaborations. Feel free to reach out to me for any inquiries, projects, or just to say hello!
                 </p>
 
-                <form className="flex flex-col items-left gap-4 w-1/2 place-self-center">
+                <form className="flex flex-col items-left gap-4 w-1/2 place-self-center" onSubmit={submit}>
                     <div className="grid">
                         Name
                         <input className="hover:border-blue-600 rounded" type="text" value={data.name} onChange={e => setData('name', e.target.value)} />
-                        {errors.name && <div>{errors.name}</div>}
+                        {errors.name && <div className="text-red-500 mt-1">{errors.name}</div>}
                     </div>
                     <div className="grid">
                         Email
                         <input className="hover:border-blue-600 rounded" type="text" value={data.email} onChange={e => setData('email', e.target.value)} />
-                        {errors.email && <div>{errors.email}</div>}
+                        {errors.email && <div className="text-red-500 mt-1">{errors.email}</div>}
                     </div>
                     <div className="grid">
                         Content
-                        <textarea className="hover:border-blue-600 rounded" value={data.content} onChange={e => setData('content', e.target.value)} />
-                        {errors.content && <div>{errors.content}</div>}
+                        <textarea className="h-64   hover:border-blue-600 rounded" value={data.content} onChange={e => setData('content', e.target.value)} />
+                        {errors.content && <div className="text-red-500 mt-1">{errors.content}</div>}
                     </div>
-                    <button className="place-self-center w-1/4 my-4 px-8 py-4 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-500 transition" type="submit" disabled={processing} onSubmit={submit}>Submit</button>
+                    <button className="place-self-center w-1/4 my-4 px-8 py-4 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-500 transition" type="submit" disabled={processing}>Submit</button>
                 </form>
 
-
-
-                {/* <div className="flex justify-center">
-                    <a href="mailto:your.email@example.com" className="px-8 py-4 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-500 transition">Contact Me</a>
-                </div> */}
             </div>
         </section>
     )
