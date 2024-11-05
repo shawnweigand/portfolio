@@ -16,6 +16,9 @@ class ContactController extends Controller
             'email' => [ 'required', 'email', 'max:255' ],
             'content' => [ 'required', 'max:500' ]
         ]);
-        dd($request);
+
+
+
+        dd($request->all());
     }
 }
