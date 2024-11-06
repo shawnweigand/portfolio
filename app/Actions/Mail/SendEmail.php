@@ -10,16 +10,17 @@ class SendEmail
 {
     use AsAction;
 
-    public string $commandSignature = 'send:email';
+    public string $commandSignature = 'send:email {name} {email} {content}';
     public string $commandDescription = 'Sends an email.';
 
     public function handle($name, $email, $content)
     {
-        $subject = 'Test Email';
+        $subject = 'Contact via Portfolio';
 
         $data = [
             'subject' => $subject,
-            'content' => $content
+            'content' => $content,
+            'email' => $email
         ];
 
         Mail::send('emails.content', $data,  function ($message) use ($name, $email, $subject) {
@@ -27,11 +28,11 @@ class SendEmail
                     ->from($email, $name)
                     ->subject($subject);
         });
-        return 'Test email sent!';    }
+        return 'Email sent!';    }
 
     public function asCommand(Command $command): void
     {
-        $email = $this->handle('Johnny Test', 'jtest@hotmail.com', 'Hello this is teh content.');
+        $email = $this->handle('Johnny Test', 'jtest@hotmail.com', 'Hello this is the content.');
         $command->info('Done!');
     }
 }

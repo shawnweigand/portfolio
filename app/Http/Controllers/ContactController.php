@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\Mail\SendEmail;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -17,8 +18,7 @@ class ContactController extends Controller
             'content' => [ 'required', 'max:500' ]
         ]);
 
+        SendEmail::run($request->name, $request->email, $request->content);
 
-
-        dd($request->all());
     }
 }

@@ -1,6 +1,9 @@
 import { useForm } from "@inertiajs/react"
+import { useState } from "react";
 
 export default function Contact() {
+
+    const [sent, setSent] = useState(false);
 
     const { data, setData, post, processing, errors, reset } = useForm({
         name: '',
@@ -13,7 +16,7 @@ export default function Contact() {
         console.log(e);
         post('/contact', {
             preserveScroll: true,
-            onSuccess: () => reset(),
+            onSuccess: () => { reset(), setSent(true) }
         })
     }
 
@@ -24,6 +27,10 @@ export default function Contact() {
                 <p className="text-lg leading-relaxed text-center mb-8">
                     I'm always open to new opportunities and collaborations. Feel free to reach out to me for any inquiries, projects, or just to say hello!
                 </p>
+
+                {sent &&
+                    <p className="mb-6 px-1 text-lg place-self-center bg-green-300">Thanks for reaching out! I will respond to your message as soon as I can :)</p>
+                }
 
                 <form className="flex flex-col items-left gap-4 w-1/2 place-self-center" onSubmit={submit}>
                     <div className="grid">
