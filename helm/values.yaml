@@ -18,6 +18,14 @@ issuer:
   server: https://acme-v02.api.letsencrypt.org/directory
 
 config:
+  APP_NAME: "Shawn Weigand"
   APP_URL: https://shawnweigand.com
   APP_ENV: production
+  MAIL_MAILER: smtp
+  MAIL_HOST: smtp.gmail.com
+  MAIL_PORT: 587
+  MAIL_USERNAME: shawnweigandapps@gmail.com
+  MAIL_ENCRYPTION: tls
+  MAIL_FROM_NAME: "${APP_NAME}"
+  MAIL_FROM_ADDRESS: weigandshawn@gmail.com
 

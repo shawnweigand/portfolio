@@ -29,7 +29,7 @@ export default function Contact() {
                 </p>
 
                 {sent &&
-                    <p className="mb-6 px-1 text-lg place-self-center bg-green-300">Thanks for reaching out! I will respond to your message as soon as I can :)</p>
+                    <p className="mb-6 px-1 text-lg text-center place-self-center bg-green-300">Thanks for reaching out! I will respond to your message as soon as I can :)</p>
                 }
 
                 <form className="flex flex-col items-left gap-4 w-1/2 place-self-center" onSubmit={submit}>
@@ -48,7 +48,7 @@ export default function Contact() {
                         <textarea className="h-64   hover:border-blue-600 rounded" value={data.content} onChange={e => setData('content', e.target.value)} />
                         {errors.content && <div className="text-red-500 mt-1">{errors.content}</div>}
                     </div>
-                    <button className="place-self-center w-1/4 my-4 px-8 py-4 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-500 transition" type="submit" disabled={processing}>Submit</button>
+                    <button className="place-self-center w-1/4 my-4 py-4 bg-blue-600 text-white text-center rounded-md shadow-md hover:bg-blue-500 transition" type="submit" disabled={processing}>Submit</button>
                 </form>
 
             </div>
