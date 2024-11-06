@@ -1,7 +1,9 @@
+import React from 'react';
+
 // Projects
 import shawnweigand from '/public/images/projects/shawnweigand.png'
 // Tools
-import React from '/public/images/tools/React.png'
+import ReactPic from '/public/images/tools/React.png'
 import Laravel from '/public/images/tools/Laravel.png'
 import Docker from '/public/images/tools/Docker.png'
 import Kubernetes from '/public/images/tools/Kubernetes.png'
@@ -32,7 +34,7 @@ export default function Projects() {
             tools: [
                 {
                     name: "React",
-                    image: React
+                    image: ReactPic
                 },
                 {
                     name: "Laravel",
@@ -61,7 +63,7 @@ export default function Projects() {
                 <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
                 <div className="grid grid-cols-3 gap-10 ">
                     {projects.map((project, index) => (
-                    <>
+                    <React.Fragment key={index}>
                     {index % 2 == 0 ?
                     <>
                         <div className="my-4">
@@ -69,8 +71,8 @@ export default function Projects() {
                             <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
                             <p className='my-4'>{project.description}</p>
                             <div className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-8 my-8">
-                                {project.tools.map((tool, index) => (
-                                    <div key={index} className="flex flex-col items-center">
+                                {project.tools.map((tool, toolIndex) => (
+                                    <div key={toolIndex} className="flex flex-col items-center">
                                         <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
                                         <p className='mt-1 text-center'>{tool.name}</p>
                                     </div>
@@ -92,8 +94,8 @@ export default function Projects() {
                             <p className='my-4'>{project.description}</p>
                             <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
                             <div className="grid grid-cols-4 place-items-center gap-8 my-8">
-                                {project.tools.map((tool, index) => (
-                                    <div key={index} className="flex flex-col items-center">
+                                {project.tools.map((tool, toolIndex) => (
+                                    <div key={toolIndex} className="flex flex-col items-center">
                                         <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
                                         <p className='mt-1 text-center'>{tool.name}</p>
                                     </div>
@@ -103,7 +105,7 @@ export default function Projects() {
                         </div>
                     </>
                     }
-                    </>
+                    </React.Fragment>
                     ))}
                 </div>
             </div>

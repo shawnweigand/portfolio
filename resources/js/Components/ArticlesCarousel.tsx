@@ -47,7 +47,7 @@ export default function ArticlesCarousel({ articles }: Props) {
           {articles.map((article, index) => (
             <div key={index} className="w-full md:w-1/3 flex-shrink-0 p-4">
                 <div className="shadow-md h-full flex flex-col rounded-lg">
-                    <img className="w-full h-64 object-cover rounded-t-lg" src={article.image} alt={article.title} />
+                    <a href={article.link} target="_blank"><img className="w-full h-64 object-cover rounded-t-lg" src={article.image} alt={article.title} /></a>
                     <div className="bg-white rounded-b-lg p-6 flex-grow flex flex-col justify-between">
                         <h2 className="text-xl font-bold mb-2">{article.title}</h2>
                         <p className="text-gray-700">{article.pubDate}</p>
