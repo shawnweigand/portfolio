@@ -20,6 +20,9 @@ jobs:
         repository: shawnweigand/devops
         path: devops
 
+    - name: List directory structure
+      run: ls -R
+
     - name: check file
       run: cat ./devops/testflow.yml
 
