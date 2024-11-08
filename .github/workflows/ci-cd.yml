@@ -14,22 +14,28 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Checkout templates
-      uses: actions/checkout@v3
-      with:
-        repository: shawnweigand/devops
-        path: .github/workflows
-
-    - name: List directory structure
-      run: pwd
-
-    - name: check file
-      run: cat ./.github/workflows/testflow.yml
-
-    - name: Run DevOps
-      uses: ./.github/workflows/testflow.yml
+    - name: test
+      uses: shawnweigand/devops/.github/workflows/testflow.yml@main
       with:
         example-input: "Hello, TestFlow!"
+
+
+    # - name: Checkout templates
+    #   uses: actions/checkout@v3
+    #   with:
+    #     repository: shawnweigand/devops
+    #     path: .github/workflows
+
+    # - name: List directory structure
+    #   run: pwd
+
+    # - name: check file
+    #   run: cat ./.github/workflows/testflow.yml
+
+    # - name: Run DevOps
+    #   uses: ./.github/workflows/testflow.yml
+    #   with:
+    #     example-input: "Hello, TestFlow!"
 
     # - name: Print
     #   uses: ./print.yml
