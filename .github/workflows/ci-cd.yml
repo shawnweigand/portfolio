@@ -8,16 +8,17 @@ on:
 
 
 jobs:
-  build:
+  checkout:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: test
-      uses: shawnweigand/devops/.github/workflows/testflow.yml@main
-      with:
-        example-input: "Hello, TestFlow!"
+  build:
+    needs: checkout
+    uses: shawnweigand/devops/.github/workflows/testflow.yml@main
+    with:
+      example-input: "Hello, TestFlow!"
 
 
     # - name: Checkout templates
