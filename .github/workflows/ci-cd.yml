@@ -21,7 +21,7 @@ jobs:
         path: .github/workflows
 
     - name: List directory structure
-      run: ls -R
+      run: pwd
 
     - name: check file
       run: cat ./.github/workflows/testflow.yml
