@@ -14,12 +14,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-  build:
+  test:
     needs: checkout
     uses: shawnweigand/devops/.github/workflows/testflow.yml@main
     with:
       example-input: "Hello, TestFlow!"
 
+  build:
+    needs: checkout
+    uses: shawnweigand/devops/.github/workflows/docker.yml@main
+    with:
+      tag: portfolio
 
     # - name: Checkout templates
     #   uses: actions/checkout@v3
