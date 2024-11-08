@@ -18,10 +18,10 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: shawnweigand/devops
-        path: print
+        path: devops
 
-    - name: List directory structure
-      run: ls -R
+    - name: check file
+      run: cat ./devops/testflow.yml
 
     # - name: Print
     #   uses: ./print.yml
