@@ -23,6 +23,11 @@ jobs:
     - name: check file
       run: cat ./devops/testflow.yml
 
+    - name: Run DevOps
+      uses: ./devops/testflow.yml
+      with:
+        example-input: "Hello, TestFlow!"
+
     # - name: Print
     #   uses: ./print.yml
 
