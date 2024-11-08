@@ -25,6 +25,7 @@ jobs:
     uses: shawnweigand/devops/.github/workflows/docker.yml@main
     with:
       tag: portfolio
+    secrets: inherit
 
     # - name: Checkout templates
     #   uses: actions/checkout@v3
