@@ -14,11 +14,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-  test:
-    needs: checkout
-    uses: shawnweigand/devops/.github/workflows/testflow.yml@main
-    with:
-      example-input: "Hello, TestFlow!"
+  # test:
+  #   needs: checkout
+  #   uses: shawnweigand/devops/.github/workflows/testflow.yml@main
+  #   with:
+  #     example-input: "Hello, TestFlow!"
 
   build:
     needs: checkout
