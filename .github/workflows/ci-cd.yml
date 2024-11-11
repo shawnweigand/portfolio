@@ -27,11 +27,18 @@ jobs:
       tag: portfolio
     secrets: inherit
 
-  approve:
+  approval:
     needs: build
-    uses: shawnweigand/devops/.github/workflows/approve.yml@main
+    uses: shawnweigand/devops/.github/workflows/approval.yml@main
     with:
       environment: production
+
+  deployment:
+    needs: build
+    uses: shawnweigand/devops/.github/workflows/deployment.yml@main
+    with:
+      valuesPath: helm/values.yml
+    secrets: inherit
 
   # deploy:
   #   runs-on: ubuntu-latest
