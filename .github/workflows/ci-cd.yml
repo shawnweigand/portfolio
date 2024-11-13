@@ -33,7 +33,7 @@ jobs:
     with:
       environment: production
 
-  deployment:
+  deploy:
     needs: approval
     uses: shawnweigand/devops/.github/workflows/deployment.yml@main
     with:
