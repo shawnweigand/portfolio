@@ -20,21 +20,21 @@ jobs:
   #   with:
   #     example-input: "Hello, TestFlow!"
 
-  build:
-    needs: checkout
-    uses: shawnweigand/devops/.github/workflows/docker.yml@main
-    with:
-      tag: portfolio
-    secrets: inherit
+  # build:
+  #   needs: checkout
+  #   uses: shawnweigand/devops/.github/workflows/docker.yml@main
+  #   with:
+  #     tag: portfolio
+  #   secrets: inherit
 
-  approval:
-    needs: build
-    uses: shawnweigand/devops/.github/workflows/approval.yml@main
-    with:
-      environment: production
+  # approval:
+  #   needs: build
+  #   uses: shawnweigand/devops/.github/workflows/approval.yml@main
+  #   with:
+  #     environment: production
 
   deploy:
-    needs: approval
+    # needs: approval
     uses: shawnweigand/devops/.github/workflows/deployment.yml@main
     with:
       valuesPath: helm/values.yml
