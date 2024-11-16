@@ -24,7 +24,7 @@ export default function Header() {
                     <MapPinIcon className='text-blue-600 w-12 h-12 mb-8'/>
                     <p className='text-lg md:text-xl mt-3 ml-2'>Brooklyn, NY</p>
                 </div>
-                <a href="#projects" className="px-8 py-4 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-500 transition">
+                <a href="#projects" className="px-8 py-4 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-500">
                 View My Work
                 </a>
                 {/* Socials */}
