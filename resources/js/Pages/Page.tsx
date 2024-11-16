@@ -14,6 +14,8 @@ interface Props {
 
 export default function Page({ articles }: Props) {
 
+    document.documentElement.classList.add('scroll-smooth');
+
     return (
         <>
         <Head title='Portfolio' />

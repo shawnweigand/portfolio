@@ -2,12 +2,16 @@ import React from 'react';
 
 // Projects
 import shawnweigand from '/public/images/projects/shawnweigand.png'
+import devops from '/public/images/projects/devops.png'
 // Tools
 import ReactPic from '/public/images/tools/React.png'
 import Laravel from '/public/images/tools/Laravel.png'
 import Docker from '/public/images/tools/Docker.png'
 import Kubernetes from '/public/images/tools/Kubernetes.png'
 import Helm from '/public/images/tools/Helm.png'
+import Tailwind from '/public/images/tools/Tailwind.png'
+import Typescript from '/public/images/tools/Typescript.png'
+import GitHub from '/public/images/tools/GitHub.png'
 
 interface Tool {
     name: string
@@ -41,6 +45,23 @@ export default function Projects() {
                     image: Laravel
                 },
                 {
+                    name: "Tailwind CSS",
+                    image: Tailwind
+                },
+                {
+                    name: "Typescript",
+                    image: Typescript
+                },
+            ]
+        },
+        {
+            title: "DevOps",
+            description: "I developed a set of CI/CD pipeline templates in GitHub Actions that streamline the deployment process for various projects. These templates automate the building of Docker images, pushing them to a container repository, and deploying to Kubernetes clusters using Helm.",
+            github: "https://github.com/shawnweigand/devops",
+            link: "https://github.com/shawnweigand/devops",
+            image: devops,
+            tools: [
+                {
                     name: "Docker",
                     image: Docker
                 },
@@ -51,61 +72,53 @@ export default function Projects() {
                 {
                     name: "Helm",
                     image: Helm
-                }
+                },
+                {
+                    name: "GitHub Actions",
+                    image: GitHub
+                },
             ]
+        },
+        {
+            title: "Coming soon...",
+            description: "",
+            github: "",
+            link: "",
+            image: "https://via.placeholder.com/300x200?text=More+Coming+Soon+...",
+            tools: []
         }
     ]
 
 
     return (
         <section id="projects" className="py-20 px-4 md:px-16 bg-gray-100">
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-                <div className="grid grid-cols-3 gap-10 ">
-                    {projects.map((project, index) => (
-                    <React.Fragment key={index}>
-                    {index % 2 == 0 ?
-                    <>
-                        <div className="my-4">
-                            <h3 className="col-start-1 col-span-1 text-2xl font-bold mb-1">{project.title}</h3>
-                            <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
-                            <p className='my-4'>{project.description}</p>
-                            <div className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-8 my-8">
-                                {project.tools.map((tool, toolIndex) => (
-                                    <div key={toolIndex} className="flex flex-col items-center">
-                                        <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
-                                        <p className='mt-1 text-center'>{tool.name}</p>
+            <div className="mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-16">Projects</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
+                    {projects.map((project: Project, index: number) => (
+                        <div key={index} className="flex-col p-4 bg-white w-full rounded-lg shadow-md">
+                            <a className='flex items-center justify-center mb-4' href={project.link} target="_blank">
+                                <img className='rounded w-full h-48 object-cover' src={project.image} alt={project.title} />
+                            </a>
+                            <div className='flex flex-col justify-between flex-grow mb-4'>
+                                <h3 className="text-2xl font-bold">{project.title}</h3>
+                                <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
+                                <p className='my-4'>{project.description}</p>
+                                {project.link && <a target="_blank" href={project.github} className='text-blue-500 hover:underline'>View on GitHub</a>}
+                            </div>
+                            { project.tools.length > 0 &&
+                            <>
+                            <p className='italic text-gray-500'>What I used:</p>
+                            <div className='flex flex-wrap justify-center border-dashed border-2 rounded'>
+                                {project.tools.map((tool: Tool, toolIndex: number) => (
+                                    <div key={toolIndex} className='grid place-items-center my-4'>
+                                        <img src={tool.image} alt={tool.name} className='h-12 object-cover' />
+                                        <div className={`px-4 py-2 mx-1`}>{tool.name}</div>
                                     </div>
                                 ))}
                             </div>
-                            <a target="_blank" href={project.github} className="text-blue-500 hover:underline">View on GitHub</a>
+                            </>}
                         </div>
-                        <div className="my-4 col-start-2 col-span-2 bg-white p-6 rounded-lg shadow-md">
-                            <a href={project.link} target="_blank"><img src={project.image} alt={project.title} /></a>
-                        </div>
-                    </>
-                    :
-                    <>
-                        <div className="my-4 col-start-1 col-span-2 bg-white p-6 rounded-lg shadow-md">
-                            <a href={project.link} target="_blank"><img src={project.image} alt={project.title} /></a>
-                        </div>
-                        <div className="my-4">
-                            <h3 className="col-start-3 col-span-1 text-2xl font-bold mb-1">{project.title}</h3>
-                            <p className='my-4'>{project.description}</p>
-                            <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
-                            <div className="grid grid-cols-4 place-items-center gap-8 my-8">
-                                {project.tools.map((tool, toolIndex) => (
-                                    <div key={toolIndex} className="flex flex-col items-center">
-                                        <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
-                                        <p className='mt-1 text-center'>{tool.name}</p>
-                                    </div>
-                                ))}
-                            </div>
-                            <a target="_blank" href={project.github} className="text-blue-500 hover:underline">View on GitHub</a>
-                        </div>
-                    </>
-                    }
-                    </React.Fragment>
                     ))}
                 </div>
             </div>
