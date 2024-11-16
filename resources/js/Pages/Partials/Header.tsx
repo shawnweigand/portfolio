@@ -20,7 +20,7 @@ export default function Header() {
             <div className="text-center md:text-left">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Shawn</h1>
                 <p className="text-xl md:text-2xl mb-3">Web Developer, Cloud Engineer, DevOps</p>
-                <div className='flex'>
+                <div className='flex place-self-center md:place-self-start'>
                     <MapPinIcon className='text-blue-600 w-12 h-12 mb-8'/>
                     <p className='text-lg md:text-xl mt-3 ml-2'>Brooklyn, NY</p>
                 </div>
@@ -28,7 +28,7 @@ export default function Header() {
                 View My Work
                 </a>
                 {/* Socials */}
-                <div className="mt-10 grid grid-cols-6 gap-2" >
+                <div className="place-self-center md:place-self-start mt-10 flex gap-4" >
                 <a href="https://github.com/shawnweigand" target="_blank" className="block col-span-1">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-12 h-12 text-blue-500 hover:opacity-75 transition-opacity duration-200">
                         <path fillRule="evenodd" d="M12 1.75a10.25 10.25 0 00-3.24 19.96c.51.09.7-.22.7-.48v-1.68c-2.89.63-3.5-1.4-3.5-1.4-.47-1.2-1.15-1.52-1.15-1.52-.94-.64.07-.63.07-.63 1.04.08 1.6 1.07 1.6 1.07.92 1.58 2.42 1.12 3.01.85.09-.67.36-1.12.65-1.38-2.31-.26-4.75-1.15-4.75-5.12 0-1.13.4-2.05 1.07-2.78-.11-.26-.46-1.28.1-2.67 0 0 .87-.28 2.85 1.06a9.88 9.88 0 015.19 0c1.98-1.34 2.85-1.06 2.85-1.06.56 1.39.21 2.41.1 2.67.67.73 1.07 1.65 1.07 2.78 0 3.99-2.45 4.86-4.78 5.11.37.32.7.94.7 1.89v2.8c0 .27.18.58.7.48A10.25 10.25 0 0012 1.75z" clipRule="evenodd"/>

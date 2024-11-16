@@ -28,7 +28,7 @@ export default function ArticlesCarousel({ articles }: Props) {
     // Set isMobile based on screen width
     useEffect(() => {
       const handleResize = () => {
-        setIsMobile(window.innerWidth < 768); // `md` breakpoint in Tailwind
+        setIsMobile(window.innerWidth < 1024); // `md` breakpoint in Tailwind
       };
 
       // Run on initial load
@@ -45,7 +45,7 @@ export default function ArticlesCarousel({ articles }: Props) {
         <div className="relative w-full overflow-hidden">
         <div className="mx-16 flex transition-transform duration-300 ease-in-out transform" style={{ transform: `translateX(-${currentIndex * (isMobile ? 100 : 100 / 3)}%)` }}>
           {articles.map((article, index) => (
-            <div key={index} className="w-full md:w-1/3 flex-shrink-0 p-4">
+            <div key={index} className="w-full lg:w-1/3 flex-shrink-0 p-4">
                 <div className="shadow-md h-full flex flex-col rounded-lg">
                     <a href={article.link} target="_blank"><img className="w-full h-64 object-cover rounded-t-lg" src={article.image} alt={article.title} /></a>
                     <div className="bg-white rounded-b-lg p-6 flex-grow flex flex-col justify-between">

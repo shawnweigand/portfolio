@@ -9,6 +9,9 @@ import Laravel from '/public/images/tools/Laravel.png'
 import Docker from '/public/images/tools/Docker.png'
 import Kubernetes from '/public/images/tools/Kubernetes.png'
 import Helm from '/public/images/tools/Helm.png'
+import Tailwind from '/public/images/tools/Tailwind.png'
+import Typescript from '/public/images/tools/Typescript.png'
+import GitHub from '/public/images/tools/GitHub.png'
 
 interface Tool {
     name: string
@@ -42,6 +45,23 @@ export default function Projects() {
                     image: Laravel
                 },
                 {
+                    name: "Tailwind CSS",
+                    image: Tailwind
+                },
+                {
+                    name: "Typescript",
+                    image: Typescript
+                },
+            ]
+        },
+        {
+            title: "DevOps",
+            description: "devops",
+            github: "https://github.com/shawnweigand/devops",
+            link: "https://github.com/shawnweigand/devops",
+            image: devops,
+            tools: [
+                {
                     name: "Docker",
                     image: Docker
                 },
@@ -52,15 +72,19 @@ export default function Projects() {
                 {
                     name: "Helm",
                     image: Helm
-                }
+                },
+                {
+                    name: "GitHub Actions",
+                    image: GitHub
+                },
             ]
         },
         {
-            title: "DevOps",
-            description: "devops",
-            github: "https://github.com/shawnweigand/devops",
-            link: "https://github.com/shawnweigand/devops",
-            image: devops,
+            title: "More coming soon...",
+            description: "",
+            github: "",
+            link: "",
+            image: "https://via.placeholder.com/300x200?text=Coming+Soon",
             tools: []
         }
     ]
@@ -68,56 +92,25 @@ export default function Projects() {
 
     return (
         <section id="projects" className="py-20 px-4 md:px-16 bg-gray-100">
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
-                    {projects.map((project, index) => (
-                        <div key={index} className="bg-red-500">
-                            Hello
+            <div className="mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-16">Projects</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 justify-items-center">
+                    {projects.map((project: Project, index: number) => (
+                        <div key={index} className="flex-col p-4 bg-white w-full rounded-lg shadow-md">
+                            <a className='h-3/4' href={project.link} target="_blank"><img className='rounded' src={project.image} alt={project.title} /></a>
+                            <h3 className="col-start-1 col-span-1 text-2xl font-bold mt-6">{project.title}</h3>
+                            <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
+                            <p className='my-4'>{project.description}</p>
+                            <div className='mt-6 flex flex-wrap justify-center'>
+                                {project.tools.map((tool: Tool, toolIndex: number) => (
+                                    <div key={toolIndex} className='grid place-items-center'>
+                                        <img src={tool.image} alt={tool.name} className='h-12 object-cover' />
+                                        <div className={`px-4 py-2 mx-1 mb-2`}>{tool.name}</div>
+                                    </div>
+                                ))}
+                            </div>
+
                         </div>
-                    // <React.Fragment key={index}>
-                    // {index % 2 == 0 ?
-                    // <>
-                    //     <div className="my-4">
-                    //         <h3 className="col-start-1 col-span-1 text-2xl font-bold mb-1">{project.title}</h3>
-                    //         <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
-                    //         <p className='my-4'>{project.description}</p>
-                    //         <div className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-8 my-8">
-                    //             {project.tools.map((tool, toolIndex) => (
-                    //                 <div key={toolIndex} className="flex flex-col items-center">
-                    //                     <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
-                    //                     <p className='mt-1 text-center'>{tool.name}</p>
-                    //                 </div>
-                    //             ))}
-                    //         </div>
-                    //         <a target="_blank" href={project.github} className="text-blue-500 hover:underline">View on GitHub</a>
-                    //     </div>
-                    //     <div className="my-4 col-start-2 col-span-2 bg-white p-6 rounded-lg shadow-md">
-                    //         <a href={project.link} target="_blank"><img src={project.image} alt={project.title} /></a>
-                    //     </div>
-                    // </>
-                    // :
-                    // <>
-                    //     <div className="my-4 col-start-1 col-span-2 bg-white p-6 rounded-lg shadow-md">
-                    //         <a href={project.link} target="_blank"><img src={project.image} alt={project.title} /></a>
-                    //     </div>
-                    //     <div className="my-4">
-                    //         <h3 className="col-start-3 col-span-1 text-2xl font-bold mb-1">{project.title}</h3>
-                    //         <p className='my-4'>{project.description}</p>
-                    //         <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
-                    //         <div className="grid grid-cols-4 place-items-center gap-8 my-8">
-                    //             {project.tools.map((tool, toolIndex) => (
-                    //                 <div key={toolIndex} className="flex flex-col items-center">
-                    //                     <img src={tool.image} alt={tool.name} className='h-16 object-cover' />
-                    //                     <p className='mt-1 text-center'>{tool.name}</p>
-                    //                 </div>
-                    //             ))}
-                    //         </div>
-                    //         <a target="_blank" href={project.github} className="text-blue-500 hover:underline">View on GitHub</a>
-                    //     </div>
-                    // </>
-                    // }
-                    // </React.Fragment>
                     ))}
                 </div>
             </div>

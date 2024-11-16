@@ -32,23 +32,23 @@ export default function Contact() {
                     <p className="mb-6 px-1 text-lg text-center place-self-center bg-green-300">Thanks for reaching out! I will respond to your message as soon as I can :)</p>
                 }
 
-                <form className="flex flex-col items-left gap-4 w-1/2 place-self-center" onSubmit={submit}>
-                    <div className="grid">
+                <form className="flex flex-col items-left gap-4 w-1/2 place-self-center place-items-center" onSubmit={submit}>
+                    <div className="grid w-full">
                         Name
                         <input className="hover:border-blue-600 rounded" type="text" value={data.name} onChange={e => setData('name', e.target.value)} />
                         {errors.name && <div className="text-red-500 mt-1">{errors.name}</div>}
                     </div>
-                    <div className="grid">
+                    <div className="grid w-full">
                         Email
                         <input className="hover:border-blue-600 rounded" type="text" value={data.email} onChange={e => setData('email', e.target.value)} />
                         {errors.email && <div className="text-red-500 mt-1">{errors.email}</div>}
                     </div>
-                    <div className="grid">
+                    <div className="grid w-full">
                         Content
-                        <textarea className="h-64   hover:border-blue-600 rounded" value={data.content} onChange={e => setData('content', e.target.value)} />
+                        <textarea className="h-64 hover:border-blue-600 rounded" value={data.content} onChange={e => setData('content', e.target.value)} />
                         {errors.content && <div className="text-red-500 mt-1">{errors.content}</div>}
                     </div>
-                    <button className="place-self-center w-1/4 my-4 py-4 bg-blue-600 text-white text-center rounded-md shadow-md hover:bg-blue-500 transition" type="submit" disabled={processing}>Submit</button>
+                    <button className="place-self-center px-8 py-4 my-4 bg-blue-600 text-white text-center rounded-md shadow-md hover:bg-blue-500 transition" type="submit" disabled={processing}>Submit</button>
                 </form>
 
             </div>
