@@ -22,7 +22,7 @@ export default function ArticlesCarousel({ articles }: Props) {
       };
 
     const prevArticle = () => {
-    setCurrentIndex(currentIndex == 0 ? currentIndex : currentIndex - 1);
+        setCurrentIndex(currentIndex == 0 ? currentIndex : currentIndex - 1);
     };
 
     // Set isMobile based on screen width
