@@ -56,7 +56,7 @@ export default function Projects() {
         },
         {
             title: "DevOps",
-            description: "devops",
+            description: "I developed a set of CI/CD pipeline templates in GitHub Actions that streamline the deployment process for various projects. These templates automate the building of Docker images, pushing them to a container repository, and deploying to Kubernetes clusters using Helm.",
             github: "https://github.com/shawnweigand/devops",
             link: "https://github.com/shawnweigand/devops",
             image: devops,
@@ -80,11 +80,11 @@ export default function Projects() {
             ]
         },
         {
-            title: "More coming soon...",
+            title: "Coming soon...",
             description: "",
             github: "",
             link: "",
-            image: "https://via.placeholder.com/300x200?text=Coming+Soon",
+            image: "https://via.placeholder.com/300x200?text=More+Coming+Soon+...",
             tools: []
         }
     ]
@@ -94,22 +94,30 @@ export default function Projects() {
         <section id="projects" className="py-20 px-4 md:px-16 bg-gray-100">
             <div className="mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-16">Projects</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 justify-items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
                     {projects.map((project: Project, index: number) => (
                         <div key={index} className="flex-col p-4 bg-white w-full rounded-lg shadow-md">
-                            <a className='h-3/4' href={project.link} target="_blank"><img className='rounded' src={project.image} alt={project.title} /></a>
-                            <h3 className="col-start-1 col-span-1 text-2xl font-bold mt-6">{project.title}</h3>
-                            <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
-                            <p className='my-4'>{project.description}</p>
-                            <div className='mt-6 flex flex-wrap justify-center'>
+                            <a className='flex items-center justify-center mb-4' href={project.link} target="_blank">
+                                <img className='rounded w-full h-48 object-cover' src={project.image} alt={project.title} />
+                            </a>
+                            <div className='flex flex-col justify-between flex-grow mb-4'>
+                                <h3 className="text-2xl font-bold">{project.title}</h3>
+                                <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
+                                <p className='my-4'>{project.description}</p>
+                                {project.link && <a target="_blank" href={project.github} className='text-blue-500 hover:underline'>View on GitHub</a>}
+                            </div>
+                            { project.tools.length > 0 &&
+                            <>
+                            <p className='italic text-gray-500'>What I used:</p>
+                            <div className='flex flex-wrap justify-center border-dashed border-2 rounded'>
                                 {project.tools.map((tool: Tool, toolIndex: number) => (
-                                    <div key={toolIndex} className='grid place-items-center'>
+                                    <div key={toolIndex} className='grid place-items-center my-4'>
                                         <img src={tool.image} alt={tool.name} className='h-12 object-cover' />
-                                        <div className={`px-4 py-2 mx-1 mb-2`}>{tool.name}</div>
+                                        <div className={`px-4 py-2 mx-1`}>{tool.name}</div>
                                     </div>
                                 ))}
                             </div>
-
+                            </>}
                         </div>
                     ))}
                 </div>
