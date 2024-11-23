@@ -6,7 +6,7 @@ export default function Header() {
 
     return (
         <header className="flex flex-col items-center justify-center h-screen bg-cover bg-center">
-        <div className="flex flex-col items-center md:flex-row md:space-x-8">
+        <div className="bg-white p-16 rounded-lg shadow-md flex flex-col items-center md:flex-row md:space-x-8 mb-8">
             {/* Profile Picture */}
             <div className="w-64 h-64 overflow-hidden rounded-full shadow-lg">
                 <img
