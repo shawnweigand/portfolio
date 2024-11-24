@@ -18,6 +18,11 @@ Route::get('/', function () {
 
 Route::post('/contact', ContactController::class)->name('Contact');
 
+// For liveness probe
+Route::get('/health', function () {
+    return response()->json(['status' => 'healthy', 'code' => 200], 200);
+});
+
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
 //         'canLogin' => Route::has('login'),
