@@ -17,6 +17,9 @@ issuer:
   email: weigandshawn@gmail.com
   server: https://acme-v02.api.letsencrypt.org/directory
 
+pdb:
+  minAvailable: 1
+
 config:
   APP_NAME: "Shawn Weigand"
   APP_URL: https://shawnweigand.com
