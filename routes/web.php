@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::post('/contact', ContactController::class)->name('Contact');
 
 // For liveness probe
-Route::get('/health', function () {
+Route::get('/healthz', function () {
     return response()->json(['status' => 'healthy', 'code' => 200], 200);
 });
 
