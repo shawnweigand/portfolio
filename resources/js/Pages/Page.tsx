@@ -19,7 +19,7 @@ export default function Page({ articles }: Props) {
     return (
         <>
         <Head title='Portfolio' />
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen bg-white text-gray-900">
+        <div className="bg-[#EFEFEF] min-h-screen bg-white text-gray-900">
             {/* Hero Section */}
             <Header />
 
