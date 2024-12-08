@@ -19,7 +19,7 @@ export default function Page({ articles }: Props) {
     return (
         <>
         <Head title='Portfolio' />
-        <div className="bg-[#EFEFEF] min-h-screen text-gray-900">
+        <div className="bg-[#EFEFEF] min-h-screen text-[#2e250a]">
             {/* Hero Section */}
             <Header />
 
