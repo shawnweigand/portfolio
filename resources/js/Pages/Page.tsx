@@ -39,7 +39,7 @@ export default function Page({ articles }: Props) {
             <Contact />
 
             {/* Footer */}
-            <footer className="py-6 bg-gray-100 text-center">
+            <footer className="py-6 text-center">
                 <p>&copy; 2024 Shawn Weigand. All rights reserved.</p>
             </footer>
         </div>
