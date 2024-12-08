@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Projects
-import shawnweigand from '/public/images/projects/shawnweigand.png'
+import portfolio from '/public/images/projects/portfolio.png'
 import devops from '/public/images/projects/devops.png'
 // Tools
 import ReactPic from '/public/images/tools/React.png'
@@ -34,7 +34,7 @@ export default function Projects() {
             description: "This portfolio site serves as both a showcase of my work and a hands-on project to deepen my skills in full-stack development. It allows me to practice deploying and managing full stack applications with a stateful frontend and API-powered backend on a personal cluster.",
             github: "https://github.com/shawnweigand/portfolio",
             link: "https://shawnweigand.com",
-            image: shawnweigand,
+            image: portfolio,
             tools: [
                 {
                     name: "React",
@@ -91,9 +91,9 @@ export default function Projects() {
 
 
     return (
-        <section id="projects" className="py-20 px-4 md:px-16 bg-gray-100">
+        <section id="projects" className="py-20 px-4 md:px-16">
             <div className="mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-16">Projects</h2>
+                <h2 className="text-[#2e250a] text-3xl font-bold text-center mb-16">Personal Projects</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
                     {projects.map((project: Project, index: number) => (
                         <div key={index} className="flex-col p-4 bg-white w-full rounded-lg shadow-md">

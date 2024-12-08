@@ -15,8 +15,8 @@ interface Article {
 export default function Articles({ articles }: Props) {
 
     return (
-          <section id="articles" className="py-20 px-4 md:px-16 bg-gray-100">
-            <h2 className="text-3xl font-bold text-center mb-8">My Articles</h2>
+          <section id="articles" className="py-20 px-4 md:px-16">
+            <h2 className="text-[#2e250a] text-3xl font-bold text-center mb-8">My Articles</h2>
             <ArticlesCarousel articles={articles}></ArticlesCarousel>
           </section>
     )
