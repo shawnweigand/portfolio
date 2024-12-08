@@ -7,6 +7,7 @@ import Skills from '@/Pages/Partials/Skills';
 import Projects from '@/Pages/Partials/Projects';
 import Contact from '@/Pages/Partials/Contact';
 import Articles from './Partials/Articles';
+import Experience from './Partials/Experience';
 
 interface Props {
     articles: []
@@ -25,6 +26,9 @@ export default function Page({ articles }: Props) {
 
             {/* About Section */}
             <About />
+
+            {/* Experience Section */}
+            <Experience />
 
             {/* Skills Section */}
             <Skills />
