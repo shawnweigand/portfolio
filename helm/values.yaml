@@ -24,7 +24,7 @@ config:
   APP_NAME: "Shawn Weigand"
   APP_URL: https://shawnweigand.com
   APP_ENV: production
-  SESSION_DRIVER: array
+  SESSION_DRIVER: cookie
   MAIL_MAILER: smtp
   MAIL_HOST: smtp.gmail.com
   MAIL_PORT: 587
