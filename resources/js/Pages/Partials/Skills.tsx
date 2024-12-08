@@ -1,6 +1,5 @@
 interface Skill {
     name: string
-    color: string
     skills: string[]
 }
 
@@ -9,7 +8,6 @@ export default function Skills() {
     const skills: Skill[] = [
         {
             name: "Frontend",
-            color: "red",
             skills: [
                         "React",
                         "Next.js",
@@ -20,7 +18,6 @@ export default function Skills() {
         },
         {
             name: "Backend",
-            color: "blue",
             skills: [
                         "Node.js",
                         "PHP",
@@ -29,7 +26,6 @@ export default function Skills() {
         },
         {
             name: "Cloud & DevOps",
-            color: "yellow",
             skills: [
                         "Azure",
                         "Docker",
@@ -43,16 +39,16 @@ export default function Skills() {
 
 
     return (
-          <section id="skills" className="py-20 px-4 md:px-16 bg-white">
+          <section id="skills" className="py-20 px-4 md:px-16">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-8">Skills</h2>
+              <h2 className="text-3xl text-[#2e250a] font-bold text-center mb-8">Skills</h2>
               <div className="grid grid-cols-1 justify-items-center md:grid-cols-3 gap-8 text-center">
                 <div className="p-4">
                 {/* Skill one */}
                 <h3 className="text-xl font-semibold mb-4">{skills[0].name}</h3>
                 <div className='flex flex-wrap justify-center'>
                     {skills[0].skills.map((value: string) => (
-                        <div key={value} className={`text-white bg-red-600 rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
+                        <div key={value} className={`text-white bg-[#799B62] rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
                     ))}
                 </div>
                 </div>
@@ -61,7 +57,7 @@ export default function Skills() {
                 <h3 className="text-xl font-semibold mb-4">{skills[1].name}</h3>
                 <div className='flex flex-wrap justify-center'>
                     {skills[1].skills.map((value: string) => (
-                        <div key={value} className={`text-white bg-blue-600 rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
+                        <div key={value} className={`text-white bg-[#799B62] rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
                     ))}
                 </div>
                 </div>
@@ -70,7 +66,7 @@ export default function Skills() {
                 <h3 className="text-xl font-semibold mb-4">{skills[2].name}</h3>
                 <div className='flex flex-wrap justify-center'>
                     {skills[2].skills.map((value: string) => (
-                        <div key={value} className={`text-white bg-yellow-600 rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
+                        <div key={value} className={`text-white bg-[#799B62] rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
                     ))}
                 </div>
                 </div>

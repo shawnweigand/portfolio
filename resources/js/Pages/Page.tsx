@@ -19,7 +19,7 @@ export default function Page({ articles }: Props) {
     return (
         <>
         <Head title='Portfolio' />
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen bg-white text-gray-900">
+        <div className="bg-[#EFEFEF] min-h-screen bg-white text-gray-900">
             {/* Hero Section */}
             <Header />
 
@@ -39,7 +39,7 @@ export default function Page({ articles }: Props) {
             <Contact />
 
             {/* Footer */}
-            <footer className="py-6 bg-gray-100 text-center">
+            <footer className="py-6 text-center">
                 <p>&copy; 2024 Shawn Weigand. All rights reserved.</p>
             </footer>
         </div>

@@ -60,13 +60,13 @@ export default function ArticlesCarousel({ articles }: Props) {
         </div>
         <button
           onClick={prevArticle}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#2e250a] text-white p-2 rounded-full focus:outline-none"
         >
           &#10094;
         </button>
         <button
           onClick={nextArticle}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#2e250a] text-white p-2 rounded-full focus:outline-none"
         >
           &#10095;
         </button>
