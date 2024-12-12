@@ -8,11 +8,11 @@ export default function Header() {
         <header className="flex flex-col items-center justify-center h-screen bg-cover bg-center">
 
             {/* Profile Picture */}
-            <div className="w-64 h-64 overflow-hidden rounded-full shadow-lg">
+            <div className="w-64 h-64 flex-shrink-0 overflow-hidden rounded-full shadow-lg">
                 <img
                 src={profile}
                 alt="Shawn Weigand"
-                className="w-full h-full translate-y-[10%] object-top object-cover transform scale-125"
+                className="w-full h-full min-w-full min-h-full translate-y-[10%] object-top object-cover transform scale-125"
                 />
             </div>
 
