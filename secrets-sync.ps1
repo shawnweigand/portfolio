@@ -2,7 +2,7 @@
 $command="kubectl create secret generic portfolio-secret"
 
 # get initial secrets from HashiCorp Vault
-$secrets=hcp vault-secrets secrets list --format=json | ConvertFrom-Json
+$secrets=hcp vault-secrets secrets list --app portfolio --format=json | ConvertFrom-Json
 
 # loop through secrets
 foreach ($secret in $secrets) {
