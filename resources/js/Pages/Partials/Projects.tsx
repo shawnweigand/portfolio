@@ -3,6 +3,7 @@ import React from 'react';
 // Projects
 import portfolio from '/public/images/projects/portfolio.png'
 import devops from '/public/images/projects/devops.png'
+import crossfeed from '/public/images/projects/crossfeed.png'
 // Tools
 import ReactPic from '/public/images/tools/React.png'
 import Laravel from '/public/images/tools/Laravel.png'
@@ -12,6 +13,7 @@ import Helm from '/public/images/tools/Helm.png'
 import Tailwind from '/public/images/tools/Tailwind.png'
 import Typescript from '/public/images/tools/Typescript.png'
 import GitHub from '/public/images/tools/GitHub.png'
+import PostgreSQL from '/public/images/tools/PostgreSQL.png'
 
 interface Tool {
     name: string
@@ -80,12 +82,33 @@ export default function Projects() {
             ]
         },
         {
-            title: "Coming soon...",
-            description: "",
-            github: "",
-            link: "",
-            image: "https://via.placeholder.com/300x200?text=More+Coming+Soon+...",
-            tools: []
+            title: "Crossfeed",
+            description: "Coming soon...",
+            github: "https://github.com/shawnweigand/crossfeed",
+            link: "", //https://https://crossfeed.live
+            image: crossfeed,
+            tools: [
+                {
+                    name: "React",
+                    image: ReactPic
+                },
+                {
+                    name: "Laravel",
+                    image: Laravel
+                },
+                {
+                    name: "Tailwind CSS",
+                    image: Tailwind
+                },
+                {
+                    name: "Typescript",
+                    image: Typescript
+                },
+                {
+                    name: "PostgreSQL",
+                    image: PostgreSQL
+                }
+            ]
         }
     ]
 
@@ -102,9 +125,9 @@ export default function Projects() {
                             </a>
                             <div className='flex flex-col justify-between flex-grow mb-4'>
                                 <h3 className="text-2xl font-bold">{project.title}</h3>
-                                <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>
+                                {project.link && <a target="_blank" href={project.link} className="text-blue-500 hover:underline">{project.link}</a>}
                                 <p className='my-4'>{project.description}</p>
-                                {project.link && <a target="_blank" href={project.github} className='text-blue-500 hover:underline'>View on GitHub</a>}
+                                {project.github && <a target="_blank" href={project.github} className='text-blue-500 hover:underline'>View on GitHub</a>}
                             </div>
                             { project.tools.length > 0 &&
                             <>
