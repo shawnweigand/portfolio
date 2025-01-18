@@ -20,7 +20,7 @@ export default function Experience() {
                         <Disclosure as="div" className="col-span-3 mb-12" key="job1">
                             <DisclosureButton key="job1" className="mb-6 group flex w-full items-center justify-between hover:text-[#AE8157]">
                                 <div className="flex flex-col justify-start text-left">
-                                    <p className="font-bold text-xl leading-none mb-2">Senior Platform Engineer</p>
+                                    <p className="font-bold text-xl leading-none mb-2">Senior Full-Stack Engineer, Cloud Platforms</p>
                                     <p className="italic text-md leading-none mb-2">The Estée Lauder Companies</p>
                                     <div className="flex">
                                         <MapPinIcon className="size-5 mr-2" />
@@ -80,12 +80,12 @@ export default function Experience() {
                                             </div>
                                             <div className="ml-2 text-sm text-gray-600">
                                                 <p className="font-bold italic">What did I contribute?</p>
-                                                <p>Implemented a new data fetching standard for cost center retrieval involving lazy loading, asynchronous fetching, and Redis caching to prioritize availability in the user experience.</p>
-                                                <p>Committed features to target single resources in Terraform state and an admin panel for user permission assignments.</p>
+                                                <p>Streamlined cloud intake with a dynamic form for users to request infrastructure and engineers to add additional specifications.</p>
                                             </div>
                                             <div className="ml-2 text-sm text-gray-600">
                                                 <p className="font-bold italic">What was the impact?</p>
                                                 <p>Used to deploy 95% of Azure infrastructure with enhanced version control, repeatability, speed, and compliance.</p>
+                                                <p>Leads to potential time savings of 3 days per request and 113 additional fulfillments annually</p>
                                             </div>
                                         </div>
                                     </DisclosurePanel>
