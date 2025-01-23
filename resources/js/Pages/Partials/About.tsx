@@ -5,9 +5,8 @@ export default function About() {
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-8 text-[#2e250a]">About Me</h2>
                 <p className="text-xl leading-relaxed text-center text-[#2e250a]">
-                I'm a Full-Stack & DevOps engineer focused on optimizing cloud platforms to empower teams on high-impact work.
-                With expertise in React, PHP, Terraform, Kubernetes, and Azure DevOps, I build scalable systems and automate infrastructure.
-                Passionate about DevSecOps, I deliver reliable, efficient, and secure solutions.
+                Experienced in creating scalable platforms and automations to improve cloud, DevOps, and SRE workflows,
+                enabling faster deployments and reliable infrastructure across organizations.
                 </p>
             </div>
         </section>
