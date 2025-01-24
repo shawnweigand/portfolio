@@ -47,7 +47,7 @@ export default function Projects() {
                     image: Laravel
                 },
                 {
-                    name: "Tailwind CSS",
+                    name: "Tailwind",
                     image: Tailwind
                 },
                 {
@@ -97,7 +97,7 @@ export default function Projects() {
                     image: Laravel
                 },
                 {
-                    name: "Tailwind CSS",
+                    name: "Tailwind",
                     image: Tailwind
                 },
                 {
