@@ -25,11 +25,13 @@ config:
   APP_URL: https://shawnweigand.com
   APP_ENV: production
   SESSION_DRIVER: cookie
-  MAIL_MAILER: smtp
+  MAIL_MAILER: failover
   MAIL_HOST: smtp.gmail.com
   MAIL_PORT: 587
   MAIL_USERNAME: shawnweigandapps@gmail.com
   MAIL_ENCRYPTION: tls
+  MAIL_FROM_ADDRESS: shawn@shawnweigand.com
   MAIL_FROM_NAME: "${APP_NAME}"
-  MAIL_FROM_ADDRESS: weigandshawn@gmail.com
-
+  MAIL_TO_ADDRESS: weigandshawn@gmail.com
+  MAIL_TO_NAME: "Shawn Weigand"
+  MAILGUN_DOMAIN: shawnweigand.com
