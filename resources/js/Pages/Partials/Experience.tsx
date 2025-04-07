@@ -10,7 +10,7 @@ export default function Experience() {
                 <div className="flex flex-col w-full">
                     <div className="relative grid grid-cols-9 h-full">
                         <div className="col-span-3 text-right">
-                            <p className="italic text-xl text-gray-600">Jul 2021 - Present</p>
+                            <p className="italic text-xl text-gray-600">Jul 2021 - Mar 2025</p>
                         </div>
                         <div className="col-span-1 flex justify-center relative">
                             <span className="absolute w-5 h-5 bg-[#799B62] rounded-full border-4 border-[#EFEFEF]" />
@@ -30,6 +30,36 @@ export default function Experience() {
                                 <ChevronDownIcon className="size-5 group-data-[open]:rotate-180" />
                             </DisclosureButton>
                             <DisclosurePanel className="mt-4 text-sm/5 flex flex-col space-y-3">
+                                {/* Project 0 */}
+                                <Disclosure as="div" className="">
+                                    {({open}) => ( <>
+                                    <DisclosureButton className="group flex items-center justify-between">
+                                        <div className="flex space-x-4 text-left">
+                                            {!open ? <PlusIcon className="size-5" /> : <MinusIcon className="size-5" />}
+                                            <div className="mb-4">
+                                                <p className="font-bold text-lg leading-none mb-1 hover:underline">DNS Entry Pipeline</p>
+                                                <p className="italic text-sm text-gray-600">Tools: DNS, Kerberos, Node.js, Azure DevOps</p>
+                                            </div>
+                                        </div>
+                                    </DisclosureButton>
+                                    <DisclosurePanel className="ml-7 mb-3">
+                                        <div className="flex flex-col space-y-3">
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What is it?</p>
+                                                <p>Pipeline automation to authenticate a service account with DNS servers and automatically create A records to point domains to cloud services.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What did I contribute?</p>
+                                                <p>Pipeline development, script writing, DNS entry creation/deletion/validation, and Kerberos authentication for the service account.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What was the impact?</p>
+                                                <p>Allows the cloud team to deploy standard DNS entries for cloud services, saving 2-3 days per request on waiting time.</p>
+                                            </div>
+                                        </div>
+                                    </DisclosurePanel>
+                                    </> )}
+                                </Disclosure>
                                 {/* Project 1 */}
                                 <Disclosure as="div" className="">
                                     {({open}) => ( <>
