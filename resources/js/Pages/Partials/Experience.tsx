@@ -318,6 +318,35 @@ export default function Experience() {
                                     </DisclosurePanel>
                                     </> )}
                                 </Disclosure>
+                                {/* Project 2 */}
+                                <Disclosure as="div" className="">
+                                    {({open}) => ( <>
+                                    <DisclosureButton className="group flex items-center justify-between">
+                                        <div className="flex space-x-4 text-left">
+                                            {!open ? <PlusIcon className="size-5" /> : <MinusIcon className="size-5" />}
+                                            <div className="mb-4">
+                                                <p className="font-bold text-lg leading-none mb-1 hover:underline">Kuala Lumpur Global Technology Center</p>
+                                            </div>
+                                        </div>
+                                    </DisclosureButton>
+                                    <DisclosurePanel className="ml-7 mb-3">
+                                        <div className="flex flex-col space-y-3">
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What is it?</p>
+                                                <p>The newest global technology center for The Estée Lauder Companies, supporting Asia Pacific operations.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What did I contribute?</p>
+                                                <p>Interviewed and hired for over 40 full time positions and spearheaded over 10 programs to set up the new center.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What was the impact?</p>
+                                                <p>Support for APAC operations with 40 full time employees in all sectors of IT.</p>
+                                            </div>
+                                        </div>
+                                    </DisclosurePanel>
+                                    </> )}
+                                </Disclosure>
                             </DisclosurePanel>
                         </Disclosure>
                     </div>
