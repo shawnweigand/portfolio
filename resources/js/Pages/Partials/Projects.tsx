@@ -14,6 +14,7 @@ import Tailwind from '/public/images/tools/Tailwind.png'
 import Typescript from '/public/images/tools/Typescript.png'
 import GitHub from '/public/images/tools/GitHub.png'
 import PostgreSQL from '/public/images/tools/PostgreSQL.png'
+import Redis from '/public/images/tools/Redis.png'
 
 interface Tool {
     name: string
@@ -83,9 +84,9 @@ export default function Projects() {
         },
         {
             title: "Crossfeed",
-            description: "Coming soon...",
+            description: "Crossfeed is a platform that allows users to consume content across their favorite social medias. It aggregates posts from various sources, providing a unified feed for users to explore. The project is built with a focus on scalability and performance, utilizing a microservices architecture with cloud Paas, SaaS, and IaaS services.",
             github: "https://github.com/shawnweigand/crossfeed",
-            link: "", //https://https://crossfeed.live
+            link: "https://crossfeed.live",
             image: crossfeed,
             tools: [
                 {
@@ -107,7 +108,11 @@ export default function Projects() {
                 {
                     name: "PostgreSQL",
                     image: PostgreSQL
-                }
+                },
+                {
+                    name: "Redis",
+                    image: Redis
+                },
             ]
         }
     ]
