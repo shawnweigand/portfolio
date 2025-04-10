@@ -8,15 +8,70 @@ export default function Experience() {
             <h2 className="text-[#2e250a] text-3xl font-bold text-center mb-16">My Experience</h2>
             <div className="flex justify-center text-[#2e250a]">
                 <div className="flex flex-col w-full">
-                    <div className="relative grid grid-cols-9 h-full">
+                <div className="relative grid grid-cols-9 h-full">
                         <div className="col-span-3 text-right">
-                            <p className="italic text-xl text-gray-600">Jul 2021 - Present</p>
+                            <p className="italic text-xl text-gray-600">Mar 2025 - Present</p>
                         </div>
                         <div className="col-span-1 flex justify-center relative">
                             <span className="absolute w-5 h-5 bg-[#799B62] rounded-full border-4 border-[#EFEFEF]" />
                             <div className="w-1 h-full bg-[#799B62]" />
                         </div>
                         {/* Job 1 */}
+                        <Disclosure as="div" className="col-span-3 mb-12" key="job1">
+                            <DisclosureButton key="job1" className="mb-6 group flex w-full items-center justify-between hover:text-[#AE8157]">
+                                <div className="flex flex-col justify-start text-left">
+                                    <p className="font-bold text-xl leading-none mb-2">Cloud Engineer</p>
+                                    <p className="italic text-md leading-none mb-2">Lazard</p>
+                                    <div className="flex">
+                                        <MapPinIcon className="size-5 mr-2" />
+                                        <p>New York, New York</p>
+                                    </div>
+                                </div>
+                                <ChevronDownIcon className="size-5 group-data-[open]:rotate-180" />
+                            </DisclosureButton>
+                            <DisclosurePanel className="mt-4 text-sm/5 flex flex-col space-y-3">
+                                {/* Project 1 */}
+                                {/* <Disclosure as="div" className="">
+                                    {({open}) => ( <>
+                                    <DisclosureButton className="group flex items-center justify-between">
+                                        <div className="flex space-x-4 text-left">
+                                            {!open ? <PlusIcon className="size-5" /> : <MinusIcon className="size-5" />}
+                                            <div className="mb-4">
+                                                <p className="font-bold text-lg leading-none mb-1 hover:underline">DNS Entry Pipeline</p>
+                                                <p className="italic text-sm text-gray-600">Tools: DNS, Kerberos, Node.js, Azure DevOps</p>
+                                            </div>
+                                        </div>
+                                    </DisclosureButton>
+                                    <DisclosurePanel className="ml-7 mb-3">
+                                        <div className="flex flex-col space-y-3">
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What is it?</p>
+                                                <p>Pipeline automation to authenticate a service account with DNS servers and automatically create A records to point domains to cloud services.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What did I contribute?</p>
+                                                <p>Pipeline development, script writing, DNS entry creation/deletion/validation, and Kerberos authentication for the service account.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What was the impact?</p>
+                                                <p>Allows the cloud team to deploy standard DNS entries for cloud services, saving 2-3 days per request on waiting time.</p>
+                                            </div>
+                                        </div>
+                                    </DisclosurePanel>
+                                    </> )}
+                                </Disclosure> */}
+                            </DisclosurePanel>
+                        </Disclosure>
+                    </div>
+                    <div className="relative grid grid-cols-9 h-full">
+                        <div className="col-span-3 text-right">
+                            <p className="italic text-xl text-gray-600">Jul 2021 - Mar 2025</p>
+                        </div>
+                        <div className="col-span-1 flex justify-center relative">
+                            <span className="absolute w-5 h-5 bg-[#799B62] rounded-full border-4 border-[#EFEFEF]" />
+                            <div className="w-1 h-full bg-[#799B62]" />
+                        </div>
+                        {/* Job 2 */}
                         <Disclosure as="div" className="col-span-3 mb-12" key="job1">
                             <DisclosureButton key="job1" className="mb-6 group flex w-full items-center justify-between hover:text-[#AE8157]">
                                 <div className="flex flex-col justify-start text-left">
@@ -30,6 +85,36 @@ export default function Experience() {
                                 <ChevronDownIcon className="size-5 group-data-[open]:rotate-180" />
                             </DisclosureButton>
                             <DisclosurePanel className="mt-4 text-sm/5 flex flex-col space-y-3">
+                                {/* Project 0 */}
+                                <Disclosure as="div" className="">
+                                    {({open}) => ( <>
+                                    <DisclosureButton className="group flex items-center justify-between">
+                                        <div className="flex space-x-4 text-left">
+                                            {!open ? <PlusIcon className="size-5" /> : <MinusIcon className="size-5" />}
+                                            <div className="mb-4">
+                                                <p className="font-bold text-lg leading-none mb-1 hover:underline">DNS Entry Pipeline</p>
+                                                <p className="italic text-sm text-gray-600">Tools: DNS, Kerberos, Node.js, Azure DevOps</p>
+                                            </div>
+                                        </div>
+                                    </DisclosureButton>
+                                    <DisclosurePanel className="ml-7 mb-3">
+                                        <div className="flex flex-col space-y-3">
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What is it?</p>
+                                                <p>Pipeline automation to authenticate a service account with DNS servers and automatically create A records to point domains to cloud services.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What did I contribute?</p>
+                                                <p>Pipeline development, script writing, DNS entry creation/deletion/validation, and Kerberos authentication for the service account.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What was the impact?</p>
+                                                <p>Allows the cloud team to deploy standard DNS entries for cloud services, saving 2-3 days per request on waiting time.</p>
+                                            </div>
+                                        </div>
+                                    </DisclosurePanel>
+                                    </> )}
+                                </Disclosure>
                                 {/* Project 1 */}
                                 <Disclosure as="div" className="">
                                     {({open}) => ( <>
@@ -189,7 +274,7 @@ export default function Experience() {
                             <span className="absolute w-5 h-5 bg-[#799B62] rounded-full border-4 border-[#EFEFEF]" />
                             <div className="w-1 h-full" />
                         </div>
-                        {/* Job 2 */}
+                        {/* Job 3 */}
                         <Disclosure as="div" className="col-span-3" key="job2">
                             <DisclosureButton key="job2" className="mb-6 group flex w-full items-center justify-between hover:text-[#AE8157]">
                                 <div className="flex flex-col justify-start text-left">
@@ -228,6 +313,35 @@ export default function Experience() {
                                             <div className="ml-2 text-sm text-gray-600">
                                                 <p className="font-bold italic">What was the impact?</p>
                                                 <p>Reduced time to hire over 40 technical positions by 40% and assisted in spearheading the newest global technology center.</p>
+                                            </div>
+                                        </div>
+                                    </DisclosurePanel>
+                                    </> )}
+                                </Disclosure>
+                                {/* Project 2 */}
+                                <Disclosure as="div" className="">
+                                    {({open}) => ( <>
+                                    <DisclosureButton className="group flex items-center justify-between">
+                                        <div className="flex space-x-4 text-left">
+                                            {!open ? <PlusIcon className="size-5" /> : <MinusIcon className="size-5" />}
+                                            <div className="mb-4">
+                                                <p className="font-bold text-lg leading-none mb-1 hover:underline">Kuala Lumpur Global Technology Center</p>
+                                            </div>
+                                        </div>
+                                    </DisclosureButton>
+                                    <DisclosurePanel className="ml-7 mb-3">
+                                        <div className="flex flex-col space-y-3">
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What is it?</p>
+                                                <p>The newest global technology center for The Estée Lauder Companies, supporting Asia Pacific operations.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What did I contribute?</p>
+                                                <p>Interviewed and hired for over 40 full time positions and spearheaded over 10 programs to set up the new center.</p>
+                                            </div>
+                                            <div className="ml-2 text-sm text-gray-600">
+                                                <p className="font-bold italic">What was the impact?</p>
+                                                <p>Support for APAC operations with 40 full time employees in all sectors of IT.</p>
                                             </div>
                                         </div>
                                     </DisclosurePanel>
