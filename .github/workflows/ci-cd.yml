@@ -35,7 +35,7 @@ jobs:
 
   deploy:
     needs: approval
-    uses: shawnweigand/devops/.github/workflows/deployment.yml@main
+    uses: shawnweigand/devops/.github/workflows/deployment.yml@feat/monitoring
     with:
       valuesPath: helm/values.yaml
       helmRelease: portfolio
