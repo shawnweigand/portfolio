@@ -22,14 +22,14 @@ jobs:
 
   build:
     needs: checkout
-    uses: shawnweigand/devops/.github/workflows/docker.yml@main
+    uses: shawnweigand/devops/.github/workflows/docker.yml@feat/monitoring
     with:
       tag: portfolio
     secrets: inherit
 
   approval:
     needs: build
-    uses: shawnweigand/devops/.github/workflows/approval.yml@main
+    uses: shawnweigand/devops/.github/workflows/approval.yml@feat/monitoring
     with:
       environment: production
 
