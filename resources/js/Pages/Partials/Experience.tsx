@@ -28,17 +28,27 @@ export default function Experience() {
                 {
                     title: "Shared Kubernetes Cluster",
                     tools: "Kubernetes, Terraform, Azure",
-                    description: "A Kubernetes cluster shared across multiple teams to host applications and services.",
-                    contributions: "Architected. Security: network isolation, access control, resource quota, SSL certs, private IP, workload identities. CNI Overlay, NGINX ingress controller. Secret Store CSI. Deployed through TF.",
-                    impact: "Cost reduction through sharing compute resources across multiple teams while maintaining networking efficiency and high security."
+                    description: "Kubernetes cluster shared across multiple teams to host applications and services while minimizing cost and resource usage.",
+                    contributions: "Architected a cluster security framework with namespace isolation, resource quotas, access control, SSL certificate vault syncing (secret store CSI), private IPs, and pod workload identities. CNI Overlay and NGINX ingress controller are leveraged for efficient network usage. Secret Store CSI.",
+                    impact: "Cost reduction through sharing compute resources across multiple teams while maintaining networking efficiency and robust security."
+                    // future: network policies, montoring, logging, autoscaling
                 },
                 {
                     title: "Terraform Module Validation and Standardization",
                     tools: "Terraform, GitLab CI/CD",
-                    description: "Validation latest azurerm provider, test within workspaces, standardize module structure.",
-                    contributions: "X modules validated. unit testing and validation blocks, CI pipeline to pass tests before merge",
-                    impact: "Prevents future issues with enabling new features with opther pmodules on older versions. PRevents future issues with confirming module will return intended results before real usage."
+                    description: "Configure terraform modules to validate function with the latest azurerm provider while standardizing their structures.",
+                    contributions: "X modules successfully validated and integrated into their worskpace. Implemented unit testing and validation blocks in a CI pipeline to shift left future module validation.",
+                    impact: "Prevents future issues with module usage and enabled the latest features offered by Azure."
+                },
+                /*
+                {
+                    title: "Azure OpenAI Cloud Agent",
+                    tools: "Azure OpenAI, Azure OpenAI Assistants, Azure AI Search, Python LangChain",
+                    description: "An AI agent that assists engineers with company-specific cloud tasks. Capabilities include referencing internal Confluence documentation, reading internal Digicert certificates, and reading existing infrastructure and costs from Azure.",
+                    contributions: "Developed the Langchain ingestion, chunking, AI Search storage for Confluence documentation. Built all tools for the agent to use and the python CLI application to chat with the agent.",
+                    impact: "Began the AI transformation for the cloud team, enabled ease of access to internal cloud documentation and data."
                 }
+                */
             ]
         },
         {
@@ -58,7 +68,7 @@ export default function Experience() {
                     title: "Kubernetes Backup Infrastructure and Automation",
                     tools: "Kubernetes, AKS Backup Vault, Terraform, Bicep, Azure DevOps, Powershell, Bash",
                     description: "Automated backup and restore process for all new and existing Kubernetes clusters to ensure data integrity and disaster recovery.",
-                    contributions: "Developed the backup infrastructure plan with vaults and policies per subscription, with Terraform automation to apply the backup extensions for new clusters and an Azure DevOps/Bicep automation to apply the backup extensions to existing clusters.",
+                    contributions: "Deployed the backup vaults and policies per subscription, with Terraform automation to apply the backup extensions for new clusters and an Azure DevOps/Bicep automation to apply the backup extensions to existing clusters.",
                     impact: "Enabled backups for all clusters in the environment, ensuring data integrity and disaster recovery for around 100 clusters."
                 },
                 {

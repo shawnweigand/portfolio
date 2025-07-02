@@ -7,36 +7,41 @@ export default function Skills() {
 
     const skills: Skill[] = [
         {
-            name: "Frontend",
+            name: "Cloud",
             skills: [
-                        "React",
-                        "Next.js",
-                        "Typescript",
-                        "JavaScript",
-                        "Tailwind"
-                    ],
+                "Azure",
+                "Kubernetes",
+                "Terraform",
+                "Ansible",
+                "Azure AI Services",
+            ]
         },
         {
-            name: "Backend",
+            name: "DevOps",
             skills: [
-                        "Node.js",
-                        "PHP",
-                        "Laravel",
-                    ],
+                "Azure DevOps",
+                "GitHub Actions",
+                "GitLab CI/CD",
+                "Docker",
+                "Helm",
+                "Bash",
+                "Powershell",
+            ]
         },
         {
-            name: "Cloud & DevOps",
+            name: "Development",
             skills: [
-                        "Azure",
-                        "Docker",
-                        "Kubernetes",
-                        "Terraform",
-                        "Helm"
-                    ],
+                "React",
+                "Typescript",
+                "JavaScript",
+                "Tailwind CSS",
+                "PHP",
+                "Laravel",
+                "Python",
+                "Node.js",
+            ]
         }
-
     ]
-
 
     return (
           <section id="skills" className="py-20 px-4 md:px-16">
@@ -57,7 +62,7 @@ export default function Skills() {
                 <h3 className="text-xl font-semibold mb-4">{skills[1].name}</h3>
                 <div className='flex flex-wrap justify-center'>
                     {skills[1].skills.map((value: string) => (
-                        <div key={value} className={`text-white bg-[#799B62] rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
+                        <div key={value} className={`text-white bg-[#B79065] rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
                     ))}
                 </div>
                 </div>
@@ -66,7 +71,7 @@ export default function Skills() {
                 <h3 className="text-xl font-semibold mb-4">{skills[2].name}</h3>
                 <div className='flex flex-wrap justify-center'>
                     {skills[2].skills.map((value: string) => (
-                        <div key={value} className={`text-white bg-[#799B62] rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
+                        <div key={value} className={`text-white bg-[#2e250a] rounded-full px-4 py-2 mx-1 mb-2`}>{value}</div>
                     ))}
                 </div>
                 </div>
