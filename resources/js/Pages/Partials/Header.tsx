@@ -22,7 +22,7 @@ export default function Header() {
                 className="scale-75 -mt-8"
             />
 
-            <p className="text-xl text-[#2e250a] md:text-2xl -mt-4">Cloud Platforms • DevOps • Full-Stack Engineer </p>
+            <p className="text-xl text-[#2e250a] md:text-2xl -mt-4">Cloud • DevOps • Development </p>
 
             {/* Socials */}
             <div className="flex gap-4 my-8">
