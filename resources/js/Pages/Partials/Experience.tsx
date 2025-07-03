@@ -26,7 +26,7 @@ export default function Experience() {
             // Need to refine both projects
             projects: [
                 {
-                    title: "Shared Kubernetes Cluster",
+                    title: "Multi-Tenant Kubernetes Cluster",
                     tools: "Kubernetes, Terraform, Azure",
                     description: "Kubernetes cluster shared across multiple teams to host applications and services while minimizing cost and resource usage.",
                     contributions: "Architected a cluster security framework with namespace isolation, resource quotas, access control, SSL certificate vault syncing (secret store CSI), private IPs, and pod workload identities. CNI Overlay and NGINX ingress controller are leveraged for efficient network usage. Secret Store CSI.",
