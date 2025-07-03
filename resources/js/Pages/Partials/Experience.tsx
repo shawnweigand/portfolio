@@ -31,13 +31,13 @@ export default function Experience() {
                     description: "Kubernetes cluster shared across multiple teams to host applications and services while minimizing cost and resource usage.",
                     contributions: "Architected a cluster security framework with namespace isolation, resource quotas, access control, SSL certificate vault syncing (secret store CSI), private IPs, and pod workload identities. CNI Overlay and NGINX ingress controller are leveraged for efficient network usage. Secret Store CSI.",
                     impact: "Cost reduction through sharing compute resources across multiple teams while maintaining networking efficiency and robust security."
-                    // future: network policies, montoring, logging, autoscaling
+                    // future: network policies, montoring, logging, autoscaling, cost back separation
                 },
                 {
                     title: "Terraform Module Validation and Standardization",
                     tools: "Terraform, GitLab CI/CD",
                     description: "Configure terraform modules to validate function with the latest azurerm provider while standardizing their structures.",
-                    contributions: "X modules successfully validated and integrated into their worskpace. Implemented unit testing and validation blocks in a CI pipeline to shift left future module validation.",
+                    contributions: "50 modules successfully validated and integrated into their worskpace. Implemented unit testing and validation blocks in a CI pipeline to shift left future module validation.",
                     impact: "Prevents future issues with module usage and enabled the latest features offered by Azure."
                 },
                 /*
