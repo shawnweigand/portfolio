@@ -8,9 +8,11 @@
         "php": "^8.2",
         "inertiajs/inertia-laravel": "^1.0",
         "laravel/framework": "^11.9",
+        "laravel/horizon": "^5.33",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "lorisleiva/laravel-actions": "^2.8",
+        "spatie/laravel-prometheus": "^1.2",
         "symfony/http-client": "^7.2",
         "symfony/mailgun-mailer": "^7.1",
         "tightenco/ziggy": "^2.0"
