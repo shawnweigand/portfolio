@@ -31,6 +31,7 @@ services:
       - app
     depends_on:
       - vite
+      - redis
 
   vite:
     container_name: vite
@@ -49,6 +50,20 @@ services:
     networks:
       - app
 
+  redis:
+    container_name: redis
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - app
+    volumes:
+        - redis_data:/data
+
 networks:
   app:
     driver: bridge
+
+volumes:
+  redis_data:
