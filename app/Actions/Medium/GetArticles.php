@@ -22,7 +22,7 @@ class GetArticles
     // Construct with URL and articles
     public function __construct()
     {
-        $this->url = "https://medium.com/feed/@weigandshawn";
+        $this->url = "https://medium.com/feed/@theshawnshop";
         $this->articles = [];
     }
 
