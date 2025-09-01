@@ -34,7 +34,7 @@ config:
   MAIL_ENCRYPTION: tls
   MAIL_FROM_ADDRESS: shawn@shawnweigand.com
   MAIL_FROM_NAME: "${APP_NAME}"
-  MAIL_TO_ADDRESS: weigandshawn@gmail.com
+  MAIL_TO_ADDRESS: shawn@shawnweigand.com
   MAIL_TO_NAME: "Shawn Weigand"
   MAILGUN_DOMAIN: shawnweigand.com
   QUEUE_CONNECTION: redis

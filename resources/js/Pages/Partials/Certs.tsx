@@ -1,6 +1,7 @@
 // Certs
 import az900 from '/public/images/certs/az900.svg'
 import hcta003 from '/public/images/certs/hcta003.png'
+import az104 from '/public/images/certs/az104.png'
 
 interface Cert {
     title: string,
@@ -29,6 +30,14 @@ export default function Certs() {
             link: "https://www.credly.com/badges/445a79de-8bd8-4424-ac0a-9d9040790cf0",
             image: hcta003,
             date: 'February 12, 2024',
+        },
+        {
+            title: "AZ-104: Azure Administrator Associate",
+            issuer: 'Microsoft',
+            description: "Demonstrate key skills to configure, manage, secure, and administer key professional functions in Microsoft Azure.",
+            link: "https://learn.microsoft.com/en-us/users/shawnweigand/credentials/93d788292b9cddd9?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+            image: az104,
+            date: 'August 25, 2025',
         },
     ]
 

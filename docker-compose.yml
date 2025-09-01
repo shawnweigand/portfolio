@@ -1,6 +1,6 @@
 services:
   app:
-    container_name: app
+    container_name: portfolio_app
     build:
       context: .
       dockerfile: Dockerfile
@@ -28,13 +28,13 @@ services:
     #   - "./opt/certs/:/etc/ssl/private/"
 
     networks:
-      - app
+      - portfolio_app
     depends_on:
       - vite
-      - redis
+    #   - redis
 
   vite:
-    container_name: vite
+    container_name: portfolio_vite
     build:
       context: .
       dockerfile: Dockerfile
@@ -48,22 +48,22 @@ services:
     ports:
       - "5173:5173"
     networks:
-      - app
+      - portfolio_app
 
-  redis:
-    container_name: redis
-    image: redis:latest
-    restart: always
-    ports:
-      - "6379:6379"
-    networks:
-      - app
-    volumes:
-        - redis_data:/data
+#   redis:
+#     container_name: redis
+#     image: redis:latest
+#     restart: always
+#     ports:
+#       - "6379:6379"
+#     networks:
+#       - app
+#     volumes:
+#         - redis_data:/data
 
 networks:
-  app:
+  portfolio_app:
     driver: bridge
 
-volumes:
-  redis_data:
+# volumes:
+#   redis_data:
