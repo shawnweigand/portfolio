@@ -3,6 +3,8 @@ deployment:
   image:
     repository: shawnweigand/prod
     tag: portfolio
+  probes:
+    enabled: true
   registry:
     imagePullSecret: docker-registry-secret
 serviceAccount:
