@@ -1,4 +1,5 @@
 import profile from '/public/images/Profile.png'
+import me from '/public/images/me.jpg'
 import signature from '/public/images/Signature.png'
 
 export default function Header() {
@@ -8,11 +9,11 @@ export default function Header() {
         <header className="flex flex-col items-center justify-center h-screen bg-cover bg-center">
 
             {/* Profile Picture */}
-            <div className="w-64 h-64 flex-shrink-0 overflow-hidden rounded-full shadow-lg">
+            <div className="w-80 h-80 flex-shrink-0 overflow-hidden rounded-full shadow-lg">
                 <img
-                src={profile}
+                src={me}
                 alt="Shawn Weigand"
-                className="w-full h-full min-w-full min-h-full translate-y-[10%] object-top object-cover transform scale-125"
+                className="w-full h-full min-w-full min-h-full object-bottom object-cover transform scale-150 -translate-x-4 translate-y-4"
                 />
             </div>
 
