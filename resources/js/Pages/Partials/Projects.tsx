@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Projects
 import portfolio from '/public/images/projects/portfolio.png'
 import devops from '/public/images/projects/devops.png'
 import crossfeed from '/public/images/projects/crossfeed.png'
+import gourmand from '/public/images/projects/gourmand.png'
 // Tools
 import ReactPic from '/public/images/tools/React.png'
 import Laravel from '/public/images/tools/Laravel.png'
@@ -15,6 +16,10 @@ import Typescript from '/public/images/tools/Typescript.png'
 import GitHub from '/public/images/tools/GitHub.png'
 import PostgreSQL from '/public/images/tools/PostgreSQL.png'
 import Redis from '/public/images/tools/Redis.png'
+import AzureSQL from '/public/images/tools/AzureSQL.png'
+import AmazonS3 from '/public/images/tools/AmazonS3.png'
+import GoogleGemini from '/public/images/tools/GoogleGemini.png'
+import Replicate from '/public/images/tools/Replicate.png'
 
 interface Tool {
     name: string
@@ -30,6 +35,19 @@ interface Project {
 }
 
 export default function Projects() {
+    const [expandedProjects, setExpandedProjects] = useState<Set<number>>(new Set());
+
+    const toggleProject = (index: number) => {
+        setExpandedProjects(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(index)) {
+                newSet.delete(index);
+            } else {
+                newSet.add(index);
+            }
+            return newSet;
+        });
+    };
 
     const projects: Project[] = [
         {
@@ -114,6 +132,51 @@ export default function Projects() {
                     image: Redis
                 },
             ]
+        },
+        {
+            title: "Gourmand",
+            description: "Gourmand is an AI-powered recipe generator that creates easy-to-follow recipes based on the user's preferences. It leverages multiple AI models to generate recipes, ingredients, equipment, picture instructions, and nutritional information.",
+            github: "https://github.com/shawnweigand/gourmand",
+            link: "https://gourmand.food",
+            image: gourmand,
+            tools: [
+                {
+                    name: "React",
+                    image: ReactPic
+                },
+                {
+                    name: "Laravel",
+                    image: Laravel
+                },
+                {
+                    name: "Tailwind",
+                    image: Tailwind
+                },
+                {
+                    name: "Typescript",
+                    image: Typescript
+                },
+                {
+                    name: "Azure SQL",
+                    image: AzureSQL
+                },
+                {
+                    name: "Redis",
+                    image: Redis
+                },
+                {
+                    name: "Amazon S3",
+                    image: AmazonS3
+                },
+                {
+                    name: "Google Gemini",
+                    image: GoogleGemini
+                },
+                {
+                    name: "Replicate (Image Model)",
+                    image: Replicate
+                }
+            ]
         }
     ]
 
@@ -136,15 +199,30 @@ export default function Projects() {
                             </div>
                             { project.tools.length > 0 &&
                             <>
-                            <p className='italic text-gray-500'>What I used:</p>
-                            <div className='flex flex-wrap justify-center border-dashed border-2 rounded'>
-                                {project.tools.map((tool: Tool, toolIndex: number) => (
-                                    <div key={toolIndex} className='grid place-items-center my-4'>
-                                        <img src={tool.image} alt={tool.name} className='h-12 object-cover' />
-                                        <div className={`px-4 py-2 mx-1`}>{tool.name}</div>
-                                    </div>
-                                ))}
-                            </div>
+                            <button
+                                onClick={() => toggleProject(index)}
+                                className='flex items-center gap-2 italic text-gray-500 hover:text-gray-700 cursor-pointer mb-2'
+                            >
+                                <span>What I used:</span>
+                                <svg
+                                    className={`w-4 h-4 transition-transform duration-200 ${expandedProjects.has(index) ? 'rotate-180' : ''}`}
+                                    fill='none'
+                                    stroke='currentColor'
+                                    viewBox='0 0 24 24'
+                                >
+                                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
+                                </svg>
+                            </button>
+                            {expandedProjects.has(index) && (
+                                <div className='flex flex-wrap justify-center border-dashed border-2 rounded'>
+                                    {project.tools.map((tool: Tool, toolIndex: number) => (
+                                        <div key={toolIndex} className='grid place-items-center my-4'>
+                                            <img src={tool.image} alt={tool.name} className='h-12 object-cover' />
+                                            <div className={`px-4 py-2 mx-1`}>{tool.name}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                             </>}
                         </div>
                     ))}

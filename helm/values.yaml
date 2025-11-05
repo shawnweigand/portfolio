@@ -24,6 +24,13 @@ issuer:
 pdb:
   minAvailable: 1
 
+horizon:
+  enabled: false
+  replicas: 1
+
+redis:
+  enabled: false
+
 config:
   APP_NAME: "Shawn Weigand"
   APP_URL: https://shawnweigand.com

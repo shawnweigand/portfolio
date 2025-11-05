@@ -26,19 +26,19 @@ export default function Experience() {
             // Need to refine both projects
             projects: [
                 {
+                    title: "Terraform Module Library Standardization and Automation",
+                    tools: "Terraform, Powershell, GitLab",
+                    description: "Standardizing the usage of the 13 most commonly-used Azure resources in the organization and automating the initialization of a project that leverages them.",
+                    contributions: "A complete, plug-and-play library of modules for each resource with related requirements for support and security. This is used in conjunction with a Powershell sccript UI that sets up a new code repo in GitLab with the necessary IaC code and a fully configured Terraform workspace.",
+                    impact: "Reduces promotion time of projects to higher environments from 1 week to a few hours, and turns setup of the projects to just a few minutes."
+                },
+                {
                     title: "Multi-Tenant Kubernetes Cluster",
                     tools: "Kubernetes, Terraform, Azure",
                     description: "Kubernetes cluster shared across multiple teams to host applications and services while minimizing cost and resource usage.",
                     contributions: "Architected a cluster security framework with namespace isolation, resource quotas, access control, SSL certificate vault syncing (secret store CSI), private IPs, and pod workload identities. CNI Overlay and NGINX ingress controller are leveraged for efficient network usage. Secret Store CSI.",
                     impact: "Cost reduction through sharing compute resources across multiple teams while maintaining networking efficiency and robust security."
                     // future: network policies, montoring, logging, autoscaling, cost back separation
-                },
-                {
-                    title: "Terraform Module Validation and Standardization",
-                    tools: "Terraform, GitLab CI/CD",
-                    description: "Configure terraform modules to validate function with the latest azurerm provider while standardizing their structures.",
-                    contributions: "50 modules successfully validated and integrated into their worskpace. Implemented unit testing and validation blocks in a CI pipeline to shift left future module validation.",
-                    impact: "Prevents future issues with module usage and enabled the latest features offered by Azure."
                 },
                 /*
                 {
